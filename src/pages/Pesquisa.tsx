@@ -1,4 +1,4 @@
-import { Cpu, Globe, Database, ArrowRight, Microchip, CheckCircle2, Clock } from 'lucide-react';
+import { Cpu, Globe, Database, Microchip, CheckCircle2, Clock } from 'lucide-react';
 
 // Dados Fictícios para você preencher depois
 const linhasPesquisa = [
