@@ -14,9 +14,9 @@ const publicacoes = [
   },
   {
     id: 2,
-    titulo: "Consectetur Adipiscing Elit em Ambientes de Alta Complexidade e Baixa Visibilidade",
+    titulo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     autores: "Beltrano Souza, Dr. G. Ipsum",
-    veiculo: "International Conference on Latin Systems (ICLS)",
+    veiculo: "IEEE Transactions on Fictitious Research",
     ano: 2025,
     tipo: "Conferência",
     linkPdf: "#",
@@ -24,9 +24,9 @@ const publicacoes = [
   },
   {
     id: 3,
-    titulo: "Otimização de Tempor Incididunt Através de Algoritmos Genéticos Híbridos",
+    titulo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     autores: "MSc. A. Sit, Aluna Exemplo",
-    veiculo: "Journal of Modern Placeholder Science",
+    veiculo: "IEEE Transactions on Fictitious Research",
     ano: 2024,
     tipo: "Revista",
     linkPdf: "#",
