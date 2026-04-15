@@ -21,3 +21,28 @@ html, body {
 a {
   @apply transition-colors duration-200;
 }
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Move apenas metade, pois vamos duplicar os itens para o loop perfeito */
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 40s linear infinite;
+  width: max-content;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 40s linear infinite;
+  width: max-content;
+}
+
+/* Pausa a animação quando o usuário colocar o mouse em cima para conseguir ler */
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}

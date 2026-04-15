@@ -26,17 +26,17 @@ const projetos = [
   {
     id: 1,
     titulo: "Sistema de Visão para Inspeção Submarina (SVIS)",
-    fomento: "Petrobras / ANP",
+    fomento: "CESAR",
     status: "Em andamento",
-    descricao: "Pesquisa focada em criar uma pipeline de visão computacional embarcada em ROVs para identificar corrosão em dutos de águas profundas com baixa visibilidade.",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     ano: "2024 - Atual"
   },
   {
     id: 2,
     titulo: "Controle Preditivo para Drones Agrícolas",
-    fomento: "CNPq",
+    fomento: "CESAR",
     status: "Concluído",
-    descricao: "Modelagem e simulação de rotas dinâmicas para pulverização inteligente utilizando redes neurais para previsão de correntes de vento.",
+    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     ano: "2022 - 2024"
   }
 ];
