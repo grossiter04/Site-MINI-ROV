@@ -1,27 +1,33 @@
-import { FileText, Mail } from 'lucide-react'; // Ícones leves e modernos
+import { FileText, Mail } from 'lucide-react'; 
+import fotoFernando from '../assets/Fernando_Carvalho_Foto.png';
+import fotoFlavio from '../assets/Flavio_Muniz_Foto.png';
+import fotoLisa from '../assets/Lisa_Matubara_Foto.png';
+import fotoRafael from '../assets/Rafael_Melo_Foto.png';
+import fotoVictor from '../assets/Victor_Costa_Foto.png';
 
-// Dados fictícios (Mantenha assim até ter os reais)
 const coordenacao = [
   {
-    nome: "Dr. G. Ipsum",
+    nome: "Fernando Carvalho",
     cargo: "Coordenador Geral",
-    area: "Sistemas Inteligentes e Otimização",
-    email: "g.ipsum@universidade.edu",
-    lattes: "#",
-    linkedin: "#",
-    foto: null // Pode ser uma URL depois
+    area: "Engenharia de Software, IoT e Robótica",
+    email: "ffc@cesar.org.br",
+    lattes: "http://lattes.cnpq.br/8491797408318076",
+    linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
+    foto: fotoFernando
   }, 
 ];
 
 const pesquisadores = [
-  { nome: "MSc. A. Sit", cargo: "Pesquisador Associado", area: "Visão Computacional", lattes: "#", linkedin: "#", foto: null },
-  { nome: "Fulano de Tal", cargo: "Pós-Doc", area: "Análise de Dados", lattes: "#", linkedin: "#", foto: null },
+  { nome: "Fernando Carvalho", cargo: "Pesquisador", area: "Engenharia de Software, IoT e Robótica", lattes: "#", linkedin: "#", foto: fotoFernando },
+  { nome: "Benedito Alberto Macedo", cargo: "Pesquisador", area: "Análise de Dados", lattes: "#", linkedin: "#", foto: null },
 ];
 
 const alunos = [
-  { nome: "Cicrano Silva", cargo: "Doutorando", area: "Machine Learning", lattes: "#", linkedin: "#", foto: null },
-  { nome: "Beltrano Souza", cargo: "Mestrando", area: "Robótica", lattes: "#", linkedin: "#", foto: null },
-  { nome: "Aluna Exemplo", cargo: "Iniciação Científica", area: "Web Dev", lattes: "#", linkedin: "#", foto: null },
+  { nome: "Eduardo Muniz Fontelles", cargo: "Graduação", area: "Robótica", lattes: "#", linkedin: "#", foto: null },
+  { nome: "Flávio Romero Santos de Sá Muniz", cargo: "Especialização", area: "Robótica", lattes: "http://lattes.cnpq.br/9189816041158285", linkedin: "https://www.linkedin.com/in/flavio-muniz/", foto: fotoFlavio },
+  { nome: "Lisa Matubara", cargo: "Graduação", area: "Desenvolvedora Backend", lattes: "http://lattes.cnpq.br/0545406300374038", linkedin: "https://www.linkedin.com/in/lisa-matubara/", foto: fotoLisa },
+  { nome: "Rafael Rodiani Faria Melo", cargo: "Graduação", area: "Robótica", lattes: " http://lattes.cnpq.br/0148847174850005", linkedin: "#", foto: fotoRafael },
+  { nome: "Victor Guilherme Alves Costa", cargo: "Graduação", area: "Robótica", lattes: "http://lattes.cnpq.br/0491365749315456", linkedin: "#", foto: fotoVictor },
 ];
 
 export default function Pessoas() {
@@ -67,7 +73,7 @@ export default function Pessoas() {
   );
 }
 
-// Componentes Auxiliares para manter o código limpo
+// Outros componentes
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -78,7 +84,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Ícone Genérico de Usuário para economizar banda
+// Icone Usuário
 function UserPlaceholder() {
   return (
     <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400 group-hover:bg-orange-50 group-hover:text-orange-400 transition-colors duration-300">
@@ -89,13 +95,18 @@ function UserPlaceholder() {
   );
 }
 
-// Card Maior para Coordenadores
+// Card Coordenador
 function CardPessoaDestaque({ pessoa }: { pessoa: any }) {
   return (
     <div className="group bg-white border border-slate-100 p-8 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-orange-100 hover:-translate-y-1 hover:border-orange-100">
       <div className="flex items-center gap-6 mb-6">
         <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-slate-100 group-hover:border-orange-200 transition-colors duration-300 flex-shrink-0">
-          <UserPlaceholder />
+
+          {pessoa.foto ? (
+            <img src={pessoa.foto} alt={`Foto de ${pessoa.nome}`} className="w-full h-full object-cover" />
+          ) : (
+            <UserPlaceholder />
+          )}
         </div>
         <div>
           <h3 className="text-2xl font-bold tracking-tight text-slate-950">{pessoa.nome}</h3>
@@ -114,12 +125,17 @@ function CardPessoaDestaque({ pessoa }: { pessoa: any }) {
   );
 }
 
-// Card Padrão para Pesquisadores e Alunos
+// Card Pesquisadores e Alunos
 function CardPessoa({ pessoa }: { pessoa: any }) {
   return (
     <div className="group bg-white border border-slate-100 p-6 rounded-2xl transition-all duration-300 hover:shadow-lg hover:border-orange-100 flex flex-col items-center text-center">
       <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-4 border-slate-50 group-hover:border-orange-100 transition-colors duration-300">
-        <UserPlaceholder />
+
+        {pessoa.foto ? (
+          <img src={pessoa.foto} alt={`Foto de ${pessoa.nome}`} className="w-full h-full object-cover" />
+        ) : (
+          <UserPlaceholder />
+        )}
       </div>
       <h3 className="text-lg font-semibold text-slate-900 leading-snug flex-grow">{pessoa.nome}</h3>
       <p className="text-sm font-medium text-orange-600 mb-1">{pessoa.cargo}</p>
