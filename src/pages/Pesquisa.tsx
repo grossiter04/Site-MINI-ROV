@@ -47,7 +47,7 @@ export default function Pesquisa() {
       
       <header className="border-b border-slate-200 pb-8">
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-1 bg-orange-500 rounded-full"></div>
+          <div className="w-12 h-1 w-full bg-orange-500 rounded-full"></div>
         </div>
         <h1 className="text-5xl font-extrabold tracking-tighter text-slate-950">
           Nossa <span className="text-orange-600">Pesquisa</span>
