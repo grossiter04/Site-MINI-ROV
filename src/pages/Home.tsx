@@ -1,22 +1,28 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Waves, Radar, Cpu, ChevronRight, Mic, Ticket } from 'lucide-react';
 
+// Deixei apenas o seu evento real para você testar como fica centralizado!
 const eventos = [
-  { id: 1, titulo: "Evento de subaquático", ano: "2026", local: "Internacional" },
+  { id: 1, titulo: "CROS", ano: "2026", local: "João Pessoa, PB" },
 ];
 
 const palestras = [
-  { id: 1, titulo: "Palestra sobre SLAM Subaquático", evento: "CESAR", palestrante: "Fernando Carvalho" },
+  { id: 1, titulo: "Palestra no CESAR BEAT", evento: "CESAR BEAT", palestrante: "Fernando Carvalho" },
 ];
 
-const eventosDuplicados = [...eventos, ...eventos, ...eventos];
-const palestrasDuplicadas = [...palestras, ...palestras, ...palestras];
+// Lógica Inteligente: Só anima se tiver mais de 3 itens
+const animarEventos = eventos.length > 3;
+const animarPalestras = palestras.length > 3;
+
+// Se for animar, multiplica por 4 para garantir que enche a tela. Se não, mostra só os originais.
+const eventosRender = animarEventos ? [...eventos, ...eventos, ...eventos, ...eventos] : eventos;
+const palestrasRender = animarPalestras ? [...palestras, ...palestras, ...palestras, ...palestras] : palestras;
 
 export default function Home() {
   return (
     <div className="space-y-24 pb-12">
       
-      {/* 1. Hero Section: Foco total no nicho real do laboratório */}
+      {/* 1. Hero Section */}
       <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-orange-100/50 blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-blue-50/50 blur-3xl -z-10"></div>
@@ -56,11 +62,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Seção de Pilares: Alinhados com os Artigos */}
+      {/* 2. Seção de Pilares */}
       <section>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* Card 1: Foco no artigo de Localização/SLAM */}
           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-orange-100 transition-all duration-300 group">
             <div className="w-14 h-14 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Waves className="w-7 h-7" />
@@ -74,7 +78,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Card 2: Foco no artigo de Fusão de Sensores */}
           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-orange-100 transition-all duration-300 group">
             <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Radar className="w-7 h-7" />
@@ -88,7 +91,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Card 3: Foco no artigo de Transformers/IA */}
           <div className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:border-orange-100 transition-all duration-300 group">
             <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Cpu className="w-7 h-7" />
@@ -101,11 +103,10 @@ export default function Home() {
               Conhecer projetos <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-
         </div>
       </section>
 
-      {/* 3. Seção de Eventos e Palestras (Sem a névoa lateral que você já removeu) */}
+      {/* 3. Seção de Eventos e Palestras */}
       <section className="pt-12 pb-20 overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
@@ -118,9 +119,9 @@ export default function Home() {
         </div>
 
         {/* Rolo 1: Eventos */}
-        <div className="relative flex overflow-hidden mb-8 group">
-          <div className="animate-scroll-right pause-on-hover flex gap-6 px-3">
-            {eventosDuplicados.map((item, index) => (
+        <div className={`relative flex overflow-hidden mb-8 group ${!animarEventos ? 'justify-center w-full' : ''}`}>
+          <div className={`${animarEventos ? 'animate-scroll-right pause-on-hover' : 'flex-wrap justify-center'} flex gap-6 px-3`}>
+            {eventosRender.map((item, index) => (
               <div key={`evento-${index}`} className="flex-shrink-0 w-80 bg-white border border-slate-200 rounded-2xl p-6 hover:border-orange-300 hover:shadow-md transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center">
@@ -138,9 +139,9 @@ export default function Home() {
         </div>
 
         {/* Rolo 2: Palestras */}
-        <div className="relative flex overflow-hidden group">
-          <div className="animate-scroll-left pause-on-hover flex gap-6 px-3">
-            {palestrasDuplicadas.map((item, index) => (
+        <div className={`relative flex overflow-hidden group ${!animarPalestras ? 'justify-center w-full' : ''}`}>
+          <div className={`${animarPalestras ? 'animate-scroll-left pause-on-hover' : 'flex-wrap justify-center'} flex gap-6 px-3`}>
+            {palestrasRender.map((item, index) => (
               <div key={`palestra-${index}`} className="flex-shrink-0 w-80 bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-orange-500 hover:shadow-md transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-orange-500/20 text-orange-500 rounded-xl flex items-center justify-center">
