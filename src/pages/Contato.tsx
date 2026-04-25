@@ -7,12 +7,12 @@ export default function Contato() {
       <div style={{ marginTop: '20px', lineHeight: '1.6' }}>
         <h3>Endereço</h3>
         <p>
-          Rua Dolor Sit Amet, 123 - Prédio Ipsum, Sala 404<br />
-          Cidade Eiusmod, CE - CEP: 00000-000
+          Rua Bione, 220 - Prédio Tiradentes<br />
+          Cidade Recife, PE - CEP: 50030-390
         </p>
 
         <h3 style={{ marginTop: '20px' }}>E-mail</h3>
-        <p><a href="mailto:contato@lablorem.ipsum">contato@lablorem.ipsum</a></p>
+        <p><a href="mailto:ffc@cesar.org.br">ffc@cesar.org.br</a></p>
 
         <h3 style={{ marginTop: '20px' }}>Redes e Links</h3>
         <ul>

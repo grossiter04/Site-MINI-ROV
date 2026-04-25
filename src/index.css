@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
-/* Importando a fonte Inter para dar cara de software moderno */
 
 @theme {
-  /* Define a Inter como fonte padrão */
   --font-sans: 'Inter', sans-serif;
   
-  /* Ajustando o Laranja para ser vibrante, mas não saturado demais (estilo tech) */
   --color-orange-500: #f97316;
   --color-orange-600: #ea580c;
   --color-orange-700: #c2410c;
@@ -17,14 +14,14 @@ html, body {
   @apply bg-slate-50 text-slate-900 font-sans antialiased;
 }
 
-/* Utilitário para links padrão */
+/* Links padrão */
 a {
   @apply transition-colors duration-200;
 }
 
 @keyframes scroll-left {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Move apenas metade, pois vamos duplicar os itens para o loop perfeito */
+  100% { transform: translateX(-50%); }
 }
 
 @keyframes scroll-right {
@@ -42,7 +39,7 @@ a {
   width: max-content;
 }
 
-/* Pausa a animação quando o usuário colocar o mouse em cima para conseguir ler */
+/* Pausa a animação com o mouse em cima */
 .pause-on-hover:hover {
   animation-play-state: paused;
 }
