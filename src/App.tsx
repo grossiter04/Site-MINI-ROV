@@ -6,6 +6,7 @@ import Pesquisa from './pages/Pesquisa';
 import Publicacoes from './pages/Publicacoes';
 import Contato from './pages/Contato';
 import Footer from './components/Footer';
+import Eventos from './pages/Eventos';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
           <Route path="/pessoas" element={<Pessoas />} />
           <Route path="/pesquisa" element={<Pesquisa />} />
           <Route path="/publicacoes" element={<Publicacoes />} />
-          <Route path="/contato" element={<Contato />} />
+          <Route path="/contato" element={<Contato />} />]
+          <Route path="/eventos" element={<Eventos />} />
         </Routes>
       </div>
       <Footer />
