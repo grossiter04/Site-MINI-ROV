@@ -1,8 +1,10 @@
-import { Calendar, MapPin, FileText, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, Image as ImageIcon, FileText, ExternalLink } from 'lucide-react';
 
+// Importação automatizada das imagens via Vite (aponta para src/assets/foto-cross)
 const imagensImportadas = import.meta.glob('../assets/foto-cross/*.{png,jpg,jpeg}', { eager: true, import: 'default' });
 const fotosCros2026 = Object.values(imagensImportadas) as string[];
 
+// Duplica a lista para garantir o efeito de carrossel em loop infinito
 const fotosCarrossel = [...fotosCros2026, ...fotosCros2026, ...fotosCros2026, ...fotosCros2026];
 
 const trabalhosApresentados = [
@@ -27,7 +29,7 @@ const trabalhosApresentados = [
   {
     id: 4,
     titulo: "Underwater Localization in Low-Texture Environments: Review, State of the Art and Perspectives",
-    autores: "Equipe CESAR / CEFET-RJ",
+    autores: "Equipa de Investigação CESAR / CEFET-RJ",
     abstract: "Underwater localization in low-texture environments remains a major challenge in marine robotics due to turbidity, low visibility, and scarce visual features. This article presents a hybrid systematic-narrative review of 20 recent studies that address these limitations. The approaches fall into three main categories: (1) enhanced V-SLAM methods using geometric features and Deep Learning; (2) strongly or weakly coupled VIO/VI-SLAM systems; and (3) multisensor fusion strategies integrating optical, acoustic, and active sensors. The review reveals a clear trend toward architectures that decouple localization from mapping, enabling more resilient and long-term autonomous navigation."
   }
 ];
@@ -35,74 +37,66 @@ const trabalhosApresentados = [
 export default function Eventos() {
   return (
     <div className="space-y-16 py-12">
-      
-      {/* Cabeçalho */}
       <header className="border-b border-slate-200 pb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-1 w-full bg-orange-500 rounded-full"></div>
-        </div>
-        <h1 className="text-5xl font-extrabold tracking-tighter text-slate-950">
-          Nossos <span className="text-orange-600">Eventos</span>
-        </h1>
-        <p className="text-xl text-slate-600 mt-4 max-w-3xl leading-relaxed">
-          Acompanhe os congressos, feiras e simpósios em que nosso grupo de pesquisa marca presença, compartilhando avanços em robótica e percepção.
+        <div className="w-16 h-1 bg-orange-500 mb-4"></div>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">Participação em Fóruns Científicos</h1>
+        <p className="text-lg text-slate-600 mt-4 max-w-3xl text-justify">
+          Relato de atividades externas, apresentações de comunicações científicas e disseminação de resultados em congressos especializados.
         </p>
       </header>
 
-      {/* Destaque: CROS 2026 */}
-      <section className="bg-slate-50 border border-slate-200 rounded-3xl p-8 lg:p-12">
+      <section className="bg-slate-50 border border-slate-200 rounded-lg p-8 lg:p-12">
         <div className="flex flex-col lg:flex-row gap-8 justify-between items-start">
           <div className="space-y-4 max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-orange-100 text-orange-700 text-sm font-bold rounded-full">
-              Em Destaque
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-200 text-slate-700 text-sm font-bold rounded">
+              Apresentação em Destaque
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900">
               CROS 2026
             </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              O grupo de pesquisa da CESAR está presente no evento de robótica e sistemas autônomos, apresentando quatro artigos científicos focados em SLAM, fusão de sensores LiDAR e arquiteturas Transformer para ambientes subaquáticos.
+            <p className="text-lg text-slate-600 leading-relaxed text-justify">
+              O corpo de investigadores encontra-se presente neste evento de robótica e sistemas autónomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <div className="flex items-center gap-2 text-slate-700 font-medium bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
-                <Calendar className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-2 text-slate-700 text-sm font-medium bg-white px-4 py-2 rounded border border-slate-200">
+                <Calendar className="w-4 h-4 text-orange-500" />
                 <span>2026</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-700 font-medium bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
-                <MapPin className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-2 text-slate-700 text-sm font-medium bg-white px-4 py-2 rounded border border-slate-200">
+                <MapPin className="w-4 h-4 text-orange-500" />
                 <span>João Pessoa, PB</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-700 font-medium bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm">
-                <MapPin className="w-5 h-5 text-orange-500" />
-                <span>Brasil</span>
               </div>
               <a 
                 href="https://www.sbrobotica.org/cros2026/program" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white font-bold bg-orange-600 hover:bg-orange-700 px-6 py-2 rounded-xl shadow-md transition-colors"
+                className="flex items-center gap-2 text-white text-sm font-bold bg-slate-900 hover:bg-orange-600 px-6 py-2 rounded transition-colors"
               >
-                Ver Programação <ExternalLink className="w-4 h-4" />
+                Consultar Programação <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
         </div>
 
-        {/* Galeria de Fotos do Evento em Loop */}
+        {/* Galeria em formato Carrossel Infinito */}
         <div className="mt-12 pt-12 border-t border-slate-200">
-          {/* Carrossel Infinito Reciclando o CSS da Home */}
+          <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
+            <ImageIcon className="w-6 h-6 text-orange-500" />
+            Registos do Evento
+          </h3>
+          
           <div className="relative flex overflow-hidden group pb-4">
             <div className="animate-scroll-left pause-on-hover flex gap-6 px-3">
               {fotosCarrossel.map((caminhoDaFoto, index) => (
                 <div 
                   key={index} 
-                  // w-[28rem] deixa a foto bem larga, cabendo umas 2.5 fotos na tela do PC
-                  className="flex-shrink-0 w-80 md:w-[28rem] aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200 hover:border-orange-400 hover:shadow-xl transition-all"
+                  className="flex-shrink-0 w-80 md:w-[28rem] aspect-[4/3] rounded overflow-hidden border border-slate-200 hover:border-orange-400 hover:shadow-lg transition-all"
                 >
                   <img 
                     src={caminhoDaFoto} 
-                    alt={`Registro do CROS 2026`} 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                    alt={`Registo visual do CROS 2026`} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
               ))}
@@ -111,25 +105,24 @@ export default function Eventos() {
         </div>
       </section>
 
-      {/* Artigos Apresentados (Abstracts) */}
       <section>
         <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
-          <span className="text-orange-500">//</span>
-          Artigos Apresentados no CROS 2026
+          <span className="w-6 h-1 bg-orange-500"></span>
+          Submissões Apresentadas (Abstracts)
         </h2>
 
         <div className="space-y-6">
           {trabalhosApresentados.map((trabalho) => (
-            <div key={trabalho.id} className="bg-white border border-slate-200 p-6 lg:p-8 rounded-2xl hover:border-orange-300 transition-colors shadow-sm">
+            <div key={trabalho.id} className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm">
               <h3 className="text-xl font-bold text-slate-900 mb-2 leading-snug">
                 {trabalho.titulo}
               </h3>
-              <p className="text-sm text-orange-600 font-semibold mb-6">
+              <p className="text-sm text-slate-500 mb-6 italic">
                 {trabalho.autores}
               </p>
               
-              <div className="bg-slate-50 border-l-4 border-slate-300 p-4 rounded-r-lg">
-                <div className="flex items-center gap-2 mb-2 text-slate-700 font-bold">
+              <div className="bg-slate-50 border-l-4 border-slate-300 p-6">
+                <div className="flex items-center gap-2 mb-3 text-slate-700 font-bold uppercase text-xs tracking-wider">
                   <FileText className="w-4 h-4" />
                   Abstract
                 </div>
@@ -141,7 +134,6 @@ export default function Eventos() {
           ))}
         </div>
       </section>
-
     </div>
   );
 }

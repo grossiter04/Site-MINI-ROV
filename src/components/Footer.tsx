@@ -8,7 +8,7 @@ export default function Footer() {
         
         <div>
           <h2 className="text-2xl font-bold text-white mb-4">
-            <span className="text-orange-500">MINI ROV</span>
+            <span className="text-orange-500">CREATE@C.E.S.A.R</span>
           </h2>
           <p className="text-sm leading-relaxed mb-4">
             Somos um grupo de pesquisa dedicado a explorar as fronteiras da tecnologia e inovação. 
@@ -43,8 +43,8 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-orange-500 flex-shrink-0" />
-              <a href="mailto:ffc@cesar.org.br" className="hover:text-orange-500 transition-colors">
-                ffc@cesar.org.br
+              <a href="mailto:ffc@cesar.school" className="hover:text-orange-500 transition-colors">
+                ffc@cesar.school
               </a>
             </li>
           </ul>
@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Linha de Copyright (Ano automático) */}
       <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-sm text-center">
-        <p>© {new Date().getFullYear()} LabIpsum. Todos os direitos reservados.</p>
+        <p>© {new Date().getFullYear()} CREATE@C.E.S.A.R. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

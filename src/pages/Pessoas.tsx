@@ -1,16 +1,19 @@
 import { FileText, Mail } from 'lucide-react'; 
+
+// Imports estáticos corretos para o Vite
 import fotoFernando from '../assets/Fernando_Carvalho_Foto.png';
 import fotoFlavio from '../assets/Flavio_Muniz_Foto.png';
 import fotoLisa from '../assets/Lisa_Matubara_Foto.png';
 import fotoRafael from '../assets/Rafael_Melo_Foto.png';
 import fotoVictor from '../assets/Victor_Costa_Foto.png';
+import fotoBeto from '../assets/Beto_Macedo_Foto.png';
 
 const coordenacao = [
   {
-    nome: "Fernando Carvalho",
-    cargo: "Coordenador Geral",
+    nome: "Fernando F. de Carvalho",
+    cargo: "Investigador Principal / Coordenador",
     area: "Engenharia de Software, IoT e Robótica",
-    email: "ffc@cesar.org.br",
+    email: "ffc@cesar.school",
     lattes: "http://lattes.cnpq.br/8491797408318076",
     linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
     foto: fotoFernando
@@ -18,154 +21,194 @@ const coordenacao = [
 ];
 
 const pesquisadores = [
-  { nome: "Fernando Carvalho", cargo: "Pesquisador", area: "Engenharia de Software, IoT e Robótica", lattes: "#", linkedin: "#", foto: fotoFernando },
-  { nome: "Benedito Alberto Macedo", cargo: "Pesquisador", area: "Análise de Dados", lattes: "#", linkedin: "#", foto: null },
+  { 
+    nome: "Fernando F. de Carvalho", 
+    cargo: "Investigador Associado", 
+    area: "Engenharia de Software, IoT e Robótica", 
+    lattes: "http://lattes.cnpq.br/8491797408318076", 
+    linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/", 
+    foto: fotoFernando 
+  },
+  { 
+    nome: "Benedito Alberto Macedo", 
+    cargo: "Investigador Associado", 
+    area: "Análise de Dados", 
+    lattes: "http://lattes.cnpq.br/5699536418012791", 
+    linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
+    foto: fotoBeto  
+  },
 ];
 
 const alunos = [
-  { nome: "Eduardo Muniz Fontelles", cargo: "Graduação", area: "Robótica", lattes: "#", linkedin: "#", foto: null },
-  { nome: "Flávio Romero Santos de Sá Muniz", cargo: "Especialização", area: "Robótica", lattes: "http://lattes.cnpq.br/9189816041158285", linkedin: "https://www.linkedin.com/in/flavio-muniz/", foto: fotoFlavio },
-  { nome: "Lisa Matubara", cargo: "Graduação", area: "Desenvolvedora Backend", lattes: "http://lattes.cnpq.br/0545406300374038", linkedin: "https://www.linkedin.com/in/lisa-matubara/", foto: fotoLisa },
-  { nome: "Rafael Rodiani Faria Melo", cargo: "Graduação", area: "Robótica", lattes: " http://lattes.cnpq.br/0148847174850005", linkedin: "#", foto: fotoRafael },
-  { nome: "Victor Guilherme Alves Costa", cargo: "Graduação", area: "Robótica", lattes: "http://lattes.cnpq.br/0491365749315456", linkedin: "#", foto: fotoVictor },
+  { 
+    nome: "Eduardo M. Fontelles", 
+    cargo: "Discente (Graduação)", 
+    area: "Robótica", 
+    lattes: "#", 
+    linkedin: "#", 
+    foto: null 
+  },
+  { 
+    nome: "Flávio Romero S. de S. Muniz", 
+    cargo: "Discente (Especialização)", 
+    area: "Robótica", 
+    lattes: "http://lattes.cnpq.br/9189816041158285", 
+    linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
+    foto: fotoFlavio 
+  },
+  { 
+    nome: "Lisa Matubara", 
+    cargo: "Discente (Graduação)", 
+    area: "Desenvolvedora Backend", 
+    lattes: "http://lattes.cnpq.br/0545406300374038", 
+    linkedin: "https://www.linkedin.com/in/lisa-matubara/", 
+    foto: fotoLisa 
+  },
+  { 
+    nome: "Rafael Rodiani F. Melo", 
+    cargo: "Discente (Graduação)", 
+    area: "Robótica", 
+    lattes: "http://lattes.cnpq.br/0148847174850005", 
+    linkedin: "#", 
+    foto: fotoRafael 
+  },
+  { 
+    nome: "Victor Guilherme A. Costa", 
+    cargo: "Discente (Graduação)", 
+    area: "Robótica", 
+    lattes: "http://lattes.cnpq.br/0491365749315456", 
+    linkedin: "#", 
+    foto: fotoVictor 
+  },
 ];
 
 export default function Pessoas() {
   return (
     <div className="space-y-16 py-12">
-      {/* Cabeçalho da Página - Forte uso da cor sotaque */}
+      
+      {/* Cabeçalho da Página */}
       <header className="border-b border-slate-200 pb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-1 w-full bg-orange-500 rounded-full"></div>
-        </div>
-        <h1 className="text-5xl font-extrabold tracking-tighter text-slate-950">
-          Nossa <span className="text-orange-600">Equipe</span>
+        <div className="w-16 h-1 bg-orange-500 mb-4"></div>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
+          Corpo de Investigadores
         </h1>
-        <p className="text-xl text-slate-600 mt-4 max-w-3xl leading-relaxed">
-          Conheça os pesquisadores, engenheiros e estudantes que impulsionam a inovação tecnológica no nosso grupo.
+        <p className="text-lg text-slate-600 mt-4 max-w-3xl leading-relaxed text-justify">
+          Composição multidisciplinar focada na produção de conhecimento científico original e na formação avançada de recursos humanos para o setor de robótica autônoma.
         </p>
       </header>
 
-      {/* Seção Coordenadores */}
+      {/* Seção Coordenação */}
       <section>
-        <SectionTitle>Coordenação</SectionTitle>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {coordenacao.map((p, i) => <CardPessoaDestaque key={i} pessoa={p} />)}
+        <SectionTitle>Coordenação Científica</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {coordenacao.map((p, i) => <CardDiretorio key={i} pessoa={p} destaque />)}
         </div>
       </section>
 
-      {/* Seção Pesquisadores */}
+      {/* Seção Investigadores */}
       <section>
-        <SectionTitle>Pesquisadores</SectionTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pesquisadores.map((p, i) => <CardPessoa key={i} pessoa={p} />)}
+        <SectionTitle>Investigadores Associados</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {pesquisadores.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
         </div>
       </section>
 
-      {/* Seção Alunos */}
+      {/* Seção Discentes */}
       <section>
-        <SectionTitle>Estudantes</SectionTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {alunos.map((p, i) => <CardPessoa key={i} pessoa={p} />)}
+        <SectionTitle>Discentes e Assistentes de Pesquisa</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {alunos.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
         </div>
       </section>
+
     </div>
   );
 }
 
-// Outros componentes
-
+// Subcomponente de Título de Seção
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
-      <span className="text-orange-500">//</span>
+      <span className="w-6 h-1 bg-slate-300"></span>
       {children}
     </h2>
   );
 }
 
-// Icone Usuário
-function UserPlaceholder() {
+// Subcomponente: Placeholder Formal (Quadrado)
+function FormalPlaceholder() {
   return (
-    <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-400 group-hover:bg-orange-50 group-hover:text-orange-400 transition-colors duration-300">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-1/3 h-1/3">
+    <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-300 border border-slate-200 rounded">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-1/2 h-1/2">
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
       </svg>
     </div>
   );
 }
 
-// Card Coordenador
-function CardPessoaDestaque({ pessoa }: { pessoa: any }) {
+// Subcomponente de Card Unificado (Formato Diretório Acadêmico)
+function CardDiretorio({ pessoa, destaque = false }: { pessoa: any, destaque?: boolean }) {
   return (
-    <div className="group bg-white border border-slate-100 p-8 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-orange-100 hover:-translate-y-1 hover:border-orange-100">
-      <div className="flex items-center gap-6 mb-6">
-        <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-slate-100 group-hover:border-orange-200 transition-colors duration-300 flex-shrink-0">
-
-          {pessoa.foto ? (
-            <img src={pessoa.foto} alt={`Foto de ${pessoa.nome}`} className="w-full h-full object-cover" />
-          ) : (
-            <UserPlaceholder />
-          )}
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold tracking-tight text-slate-950">{pessoa.nome}</h3>
-          <p className="text-lg font-semibold text-orange-600">{pessoa.cargo}</p>
-        </div>
-      </div>
-      <p className="text-slate-700 leading-relaxed mb-6 bg-slate-50 p-4 rounded-xl border border-slate-100">
-        <strong className="text-slate-900">Área:</strong> {pessoa.area}
-      </p>
-      <div className="flex gap-4 pt-6 border-t border-slate-100">
-        <IconLink href={`mailto:${pessoa.email}`} icon={Mail} label="Email" />
-        <IconLink href={pessoa.lattes} icon={FileText} label="Lattes" />
-        <IconLink href={pessoa.linkedin} icon={LinkedinIcon} label="LinkedIn" />
-      </div>
-    </div>
-  );
-}
-
-// Card Pesquisadores e Alunos
-function CardPessoa({ pessoa }: { pessoa: any }) {
-  return (
-    <div className="group bg-white border border-slate-100 p-6 rounded-2xl transition-all duration-300 hover:shadow-lg hover:border-orange-100 flex flex-col items-center text-center">
-      <div className="w-20 h-20 rounded-full overflow-hidden mb-5 border-4 border-slate-50 group-hover:border-orange-100 transition-colors duration-300">
-
+    <div className={`bg-white border border-slate-200 rounded-lg p-6 flex items-start gap-5 shadow-sm hover:border-slate-300 transition-colors ${destaque ? 'md:col-span-1' : ''}`}>
+      
+      {/* Imagem Formato 3x4 Acadêmico */}
+      <div className={`flex-shrink-0 ${destaque ? 'w-24 h-32' : 'w-20 h-24'} rounded overflow-hidden`}>
         {pessoa.foto ? (
-          <img src={pessoa.foto} alt={`Foto de ${pessoa.nome}`} className="w-full h-full object-cover" />
+          <img src={pessoa.foto} alt={`Fotografia de ${pessoa.nome}`} className="w-full h-full object-cover border border-slate-200 rounded" />
         ) : (
-          <UserPlaceholder />
+          <FormalPlaceholder />
         )}
       </div>
-      <h3 className="text-lg font-semibold text-slate-900 leading-snug flex-grow">{pessoa.nome}</h3>
-      <p className="text-sm font-medium text-orange-600 mb-1">{pessoa.cargo}</p>
-      <p className="text-xs text-slate-500 mb-4">{pessoa.area}</p>
-      
-      <div className="flex gap-3 pt-4 border-t border-slate-100 w-full justify-center">
-        <IconLink href={pessoa.lattes} icon={FileText} label="Lattes" compact />
-        <IconLink href={pessoa.linkedin} icon={LinkedinIcon} label="LinkedIn" compact />
+
+      {/* Dados do Investigador */}
+      <div className="flex flex-col h-full justify-start py-1">
+        <h3 className={`font-bold text-slate-900 leading-tight mb-1 ${destaque ? 'text-lg' : 'text-base'}`}>
+          {pessoa.nome}
+        </h3>
+        <p className="text-xs font-bold text-orange-600 uppercase tracking-wide mb-2">
+          {pessoa.cargo}
+        </p>
+        <p className="text-sm text-slate-600 mb-4 line-clamp-2">
+          {pessoa.area}
+        </p>
+        
+        {/* Links Acadêmicos */}
+        <div className="flex flex-wrap gap-4 mt-auto">
+          {pessoa.email && (
+            <IconLink href={`mailto:${pessoa.email}`} icon={Mail} label="Email" />
+          )}
+          {pessoa.lattes !== "#" && (
+            <IconLink href={pessoa.lattes} icon={FileText} label="Lattes" />
+          )}
+          {pessoa.linkedin !== "#" && (
+            <IconLink href={pessoa.linkedin} icon={LinkedinIcon} label="LinkedIn" />
+          )}
+        </div>
       </div>
+
     </div>
   );
 }
 
-interface IconLinkProps { href: string; icon: React.ElementType; label: string; compact?: boolean }
+// Subcomponente de Link Simples
+interface IconLinkProps { href: string; icon: React.ElementType; label: string; }
 
-function IconLink({ href, icon: Icon, label, compact }: IconLinkProps) {
+function IconLink({ href, icon: Icon, label }: IconLinkProps) {
   return (
     <a 
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className={`group/link flex items-center gap-2 text-slate-500 hover:text-orange-600 ${compact ? 'text-xs' : 'text-sm font-medium'}`}
+      className="flex items-center gap-1.5 text-slate-400 hover:text-orange-600 transition-colors"
       title={label}
     >
-      <Icon className={`${compact ? 'w-4 h-4' : 'w-5 h-5'} group-hover/link:animate-pulse`} />
-      {!compact && label}
+      <Icon className="w-4 h-4" />
+      <span className="text-xs font-semibold">{label}</span>
     </a>
   );
 }
 
+// Ícone Customizado para LinkedIn
 function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg 

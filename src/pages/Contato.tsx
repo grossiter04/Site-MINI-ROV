@@ -1,139 +1,144 @@
-import { MapPin, Phone, Mail, Globe, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Send, BookOpen, CalendarDays, Users } from 'lucide-react';
 
 export default function Contato() {
   return (
     <div className="space-y-16 py-12">
       
-      {/* Cabeçalho da Página */}
+      {/* Cabeçalho */}
       <header className="border-b border-slate-200 pb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-12 h-1 w-full bg-orange-500 rounded-full"></div>
-        </div>
-        <h1 className="text-5xl font-extrabold tracking-tighter text-slate-950">
-          Fale <span className="text-orange-600">Conosco</span>
-        </h1>
-        <p className="text-xl text-slate-600 mt-4 max-w-3xl leading-relaxed">
-          Tem interesse em nossas pesquisas, quer propor uma parceria ou ingressar no laboratório? Entre em contato pelos canais abaixo.
+        <div className="w-16 h-1 bg-orange-500 mb-4"></div>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">Comunicação e Ingresso</h1>
+        <p className="text-lg text-slate-600 mt-4 max-w-3xl text-justify">
+          Canais institucionais para cooperação científica, intercâmbio académico e informações sobre o ingresso voluntário nas atividades do grupo.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
+      {/* NOVA SEÇÃO: Modelo Stanford (Laboratório Aberto) e Agendas */}
+      <section className="bg-slate-50 border border-slate-200 rounded-lg p-8 lg:p-12">
+        <div className="flex flex-col lg:flex-row gap-10 items-start">
+          <div className="flex-1 space-y-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-200 text-slate-800 text-sm font-bold rounded uppercase tracking-wider">
+              <Users className="w-4 h-4 text-orange-600" /> Laboratório de Portas Abertas
+            </div>
+            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Agendas de Pesquisa e Participação</h2>
+            <p className="text-slate-600 leading-relaxed text-justify">
+              Inspirado no modelo de excelência dos principais laboratórios internacionais, o nosso grupo adota uma política de participação aberta. <strong>Não é necessário aguardar a publicação de editais formais para integrar a equipa.</strong> O ingresso voluntário é encorajado, e o primeiro passo é a participação ativa como ouvinte ou colaborador nas nossas reuniões e discussões científicas.
+            </p>
+
+            {/* Cronograma de Encontros */}
+            <div className="pt-4 space-y-4">
+              <h3 className="font-bold text-slate-900 flex items-center gap-2 mb-4">
+                <CalendarDays className="w-5 h-5 text-orange-600" />
+                Cronograma de Encontros (Abertos à Comunidade)
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white border border-slate-200 rounded-lg p-5 shadow-sm hover:border-orange-300 transition-colors">
+                  <p className="font-bold text-slate-900 text-base mb-1">Reunião Geral</p>
+                  <p className="text-slate-600 text-sm mb-4">Apresentação de resultados, atualizações de projetos e onboarding de novos investigadores.</p>
+                  <span className="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded border border-orange-100">
+                    Quarta-Feira • 14h30
+                  </span>
+                </div>
+                
+              </div>
+              <p className="text-xs text-slate-400 mt-2 italic">
+                * As reuniões ocorrem nas instalações da CESAR com possibilidade de acompanhamento híbrido/remoto. Utilize o formulário abaixo para solicitar o link de acesso.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Grid: Informações Oficiais e Formulário */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 pt-4">
         
-        {/* Coluna da Esquerda: Informações de Contato (Cards) */}
+        {/* Coluna Esquerda: Informações Institucionais e CNPq */}
         <div className="space-y-6">
-          
-          {/* Card de Endereço */}
-          <div className="group bg-white border border-slate-200 p-6 rounded-2xl flex gap-5 transition-all duration-300 hover:border-orange-300 hover:shadow-md">
-            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-              <MapPin className="w-6 h-6" />
+          <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-6">Canais e Registos Oficiais</h2>
+
+          {/* NOVO: Card CNPq (Destaque Principal) */}
+          <div className="bg-white border-2 border-orange-200 p-6 rounded-lg flex gap-5 shadow-sm hover:border-orange-400 hover:shadow-md transition-all">
+            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-6 h-6" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Localização</h3>
-              <p className="text-slate-600 leading-relaxed">
+              <h3 className="text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider">Diretório DGP / CNPq</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-3">
+                Consulte o espelho oficial do nosso grupo de pesquisa no Conselho Nacional de Desenvolvimento Científico e Tecnológico.
+              </p>
+              <a 
+                href="http://dgp.cnpq.br/dgp/espelhogrupo/819844" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-1 text-orange-600 text-sm font-bold hover:text-orange-700 hover:underline"
+              >
+                Aceder ao Espelho do Grupo <Globe className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-white border border-slate-200 p-6 rounded-lg flex gap-5 shadow-sm">
+            <div className="w-12 h-12 bg-slate-50 text-slate-600 rounded flex items-center justify-center flex-shrink-0">
+              <MapPin className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-900 mb-1 uppercase tracking-wider">Endereço Postal</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 Rua Bione, 220<br />
-                Recife - PE<br />
+                Recife - PE, Brasil<br />
                 CEP: 50030-390 (Caixa Postal: 55620-000)
               </p>
             </div>
           </div>
 
-          {/* Card de Telefone */}
-          <div className="group bg-white border border-slate-200 p-6 rounded-2xl flex gap-5 transition-all duration-300 hover:border-orange-300 hover:shadow-md">
-            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-              <Phone className="w-6 h-6" />
+          <div className="bg-white border border-slate-200 p-6 rounded-lg flex gap-5 shadow-sm">
+            <div className="w-12 h-12 bg-slate-50 text-slate-600 rounded flex items-center justify-center flex-shrink-0">
+              <Mail className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Telefone</h3>
-              <p className="text-slate-600 leading-relaxed">
-                (81) 99997-1110
-              </p>
-            </div>
-          </div>
-
-          {/* Card de Email */}
-          <div className="group bg-white border border-slate-200 p-6 rounded-2xl flex gap-5 transition-all duration-300 hover:border-orange-300 hover:shadow-md">
-            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-              <Mail className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">E-mail da Coordenação</h3>
-              <a href="mailto:ffc@cesar.org.br" className="text-slate-600 hover:text-orange-600 transition-colors">
-                ffc@cesar.org.br
+              <h3 className="text-sm font-bold text-slate-900 mb-1 uppercase tracking-wider">Correio Eletrónico</h3>
+              <a href="mailto:ffc@cesar.school" className="text-slate-600 text-sm hover:text-orange-600 transition-colors">
+                ffc@cesar.school
               </a>
             </div>
           </div>
-
-          {/* Card de Website */}
-          <div className="group bg-white border border-slate-200 p-6 rounded-2xl flex gap-5 transition-all duration-300 hover:border-orange-300 hover:shadow-md">
-            <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-              <Globe className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="text-lg font-bold text-slate-900 mb-1">Portal Institucional</h3>
-              <a href="https://www.cesar.org.br/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-orange-600 transition-colors">
-                www.cesar.org.br
-              </a>
-            </div>
-          </div>
-
         </div>
 
-        {/* Coluna da Direita: Formulário de Mensagem Direta */}
-        <div className="bg-slate-50 border border-slate-200 p-8 rounded-3xl h-fit">
-          <h3 className="text-2xl font-bold text-slate-900 mb-6">Envie uma mensagem</h3>
+        {/* Coluna Direita: Formulário Institucional */}
+        <div className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm h-fit">
+          <h3 className="text-xl font-bold text-slate-900 mb-6">Submissão de Consultas e Ingresso</h3>
           
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-            
+          <form action="COLE_O_SEU_LINK_DO_FORMSPREE_AQUI" method="POST" className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="space-y-1.5">
-                <label htmlFor="nome" className="text-sm font-semibold text-slate-700">Nome Completo</label>
-                <input 
-                  type="text" 
-                  id="nome" 
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-white"
-                  placeholder="Seu nome"
-                />
+                <label htmlFor="nome" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Investigador / Aluno</label>
+                <input type="text" id="nome" name="nome" required className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50" placeholder="Nome completo" />
               </div>
               <div className="space-y-1.5">
-                <label htmlFor="email" className="text-sm font-semibold text-slate-700">E-mail</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-white"
-                  placeholder="seu@email.com"
-                />
+                <label htmlFor="email" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Correio Eletrónico</label>
+                <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50" placeholder="exemplo@instituicao.edu" />
               </div>
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="assunto" className="text-sm font-semibold text-slate-700">Assunto</label>
-              <select 
-                id="assunto" 
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-white text-slate-600"
-              >
-                <option>Interesse em Pesquisa / Mestrado</option>
-                <option>Parceria Industrial</option>
-                <option>Imprensa</option>
-                <option>Outros</option>
+              <label htmlFor="assunto" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Natureza do Contacto</label>
+              <select id="assunto" name="assunto" className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50 text-slate-700">
+                <option>Interesse em Participação Voluntária (Reuniões)</option>
+                <option>Proposta de Cooperação Científica</option>
+                <option>Interesse em Programas de Pós-Graduação</option>
+                <option>Solicitação de Dados / Repositórios</option>
               </select>
             </div>
 
             <div className="space-y-1.5">
-              <label htmlFor="mensagem" className="text-sm font-semibold text-slate-700">Sua Mensagem</label>
-              <textarea 
-                id="mensagem" 
-                rows={4}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-white resize-none"
-                placeholder="Como podemos colaborar?"
-              ></textarea>
+              <label htmlFor="mensagem" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" required rows={4} className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50 resize-none" placeholder="Apresente-se e descreva o propósito do seu contacto..."></textarea>
             </div>
 
-            <button 
-              type="button"
-              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
-            >
-              <Send className="w-5 h-5" />
-              Enviar Mensagem
+            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded hover:bg-orange-600 transition-colors duration-300">
+              <Send className="w-4 h-4" />
+              Submeter Solicitação
             </button>
           </form>
         </div>
