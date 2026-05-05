@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Globe, Send, BookOpen, CalendarDays, Users } from 'lucide-react';
+import { MapPin, Mail, Globe, Send, BookOpen, CalendarDays, Users } from 'lucide-react';
 
 export default function Contato() {
   return (

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Waves, Radar, Cpu, ChevronRight, Mic, BookOpen } from 'lucide-react';
+import { ArrowRight, Waves, Radar, Cpu, ChevronRight, BookOpen } from 'lucide-react';
 
 const comunicacoesCientificas = [
   { id: 1, titulo: "CROS 2026", ano: "2026", local: "João Pessoa, PB" },
