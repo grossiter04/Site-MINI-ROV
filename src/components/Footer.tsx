@@ -12,7 +12,7 @@ export default function Footer() {
           </h2>
           <p className="text-sm leading-relaxed mb-4">
             Somos um grupo de pesquisa dedicado a explorar as fronteiras da tecnologia e inovação. 
-            Nosso foco é desenvolver soluções práticas e impactantes para os desafios atuais, combinando ciência, engenharia e criatividade.
+            Nosso foco é pesquisar soluções práticas e impactantes para os desafios atuais, combinando ciência, engenharia e criatividade.
           </p>
         </div>
 
@@ -24,6 +24,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link to="/" className="hover:text-orange-500 transition-colors">Início</Link></li>
             <li><Link to="/pesquisa" className="hover:text-orange-500 transition-colors">Pesquisa</Link></li>
+            <li><Link to="/eventos" className="hover:text-orange-500 transition-colors">Eventos</Link></li>
             <li><Link to="/pessoas" className="hover:text-orange-500 transition-colors">Equipe</Link></li>
             <li><Link to="/publicacoes" className="hover:text-orange-500 transition-colors">Publicações</Link></li>
             <li><Link to="/contato" className="hover:text-orange-500 transition-colors">Contato</Link></li>

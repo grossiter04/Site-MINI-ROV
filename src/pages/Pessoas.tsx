@@ -50,7 +50,7 @@ const alunos = [
   },
   { 
     nome: "Flávio Romero S. de S. Muniz", 
-    cargo: "Discente (Especialização)", 
+    cargo: "Discente (Graduação)", 
     area: "Robótica", 
     lattes: "http://lattes.cnpq.br/9189816041158285", 
     linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
@@ -66,7 +66,7 @@ const alunos = [
   },
   { 
     nome: "Rafael Rodiani F. Melo", 
-    cargo: "Discente (Graduação)", 
+    cargo: "Discente (Pós-Graduação)", 
     area: "Robótica", 
     lattes: "http://lattes.cnpq.br/0148847174850005", 
     linkedin: "#", 
