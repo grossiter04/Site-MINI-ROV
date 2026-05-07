@@ -7,6 +7,7 @@ import logoUPE from '../assets/logo-parceiros/UPE.png';
 import logoIFPE from '../assets/logo-parceiros/IFPE.png';
 import logoCEFET from '../assets/logo-parceiros/CEFET.png';
 import logoNavit from '../assets/logo-parceiros/NAVIT_DIGITAL.png';
+import logoGPADS from '../assets/logo-parceiros/GPADS.png';
 
 const comunicacoesCientificas = [
   { id: 1, titulo: "CROS 2026", ano: "2026", local: "João Pessoa, PB" }
@@ -33,7 +34,8 @@ const parceiros = [
   { nome: "UPE", logo: logoUPE },
   { nome: "IFPE", logo: logoIFPE },
   { nome: "CEFET/RJ", logo: logoCEFET },
-  { nome: "NAVIT DIGITAL", logo: logoNavit }
+  { nome: "NAVIT DIGITAL", logo: logoNavit },
+  { nome: "GPADS", logo: logoGPADS, url : "http://dgp.cnpq.br/dgp/espelhogrupo/27629" },
 ];
 
 export default function Home() {
@@ -98,16 +100,10 @@ export default function Home() {
                     className="flex items-center justify-center p-6 bg-white border border-slate-100 rounded-2xl hover:border-orange-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-28"
                   >
                     <a href={parceiro.url} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center">
-                    <img
+                    <img 
                       src={parceiro.logo} 
                       alt={`Logo ${parceiro.nome}`} 
-                      title={parceiro.nome}
-                      className="max-h-14 max-w-full object-contain filter grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-                      // Fallback: se a imagem não for encontrada, ele mostra o texto
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                      }}
+                      className="max-h-14 max-w-full object-contain group-hover:scale-110 transition-all duration-500"
                     />
                     </a>
                     <span className="hidden font-bold text-slate-400 text-sm text-center uppercase tracking-wide">
