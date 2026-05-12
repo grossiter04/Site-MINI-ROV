@@ -7,6 +7,7 @@ import fotoLisa from '../assets/Lisa_Matubara_Foto.png';
 import fotoRafael from '../assets/Rafael_Melo_Foto.png';
 import fotoVictor from '../assets/Victor_Costa_Foto.png';
 import fotoBeto from '../assets/Beto_Macedo_Foto.png';
+import fotoMarco from '../assets/Marco_Antonio_Foto.png';
 
 const coordenacao = [
   {
@@ -32,10 +33,17 @@ const pesquisadores = [
   { 
     nome: "Benedito Alberto Macedo", 
     cargo: "Investigador Associado", 
-    area: "Análise de Dados", 
+    area: "Gestor e desenvolvedor de Software", 
     lattes: "http://lattes.cnpq.br/5699536418012791", 
     linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
     foto: fotoBeto  
+  },
+  { 
+    nome: "Marco A. de Oliveira Domingues", 
+    cargo: "Desenvolvedor de Software", 
+    area: "Visão Computacional e Robótica", 
+    lattes: "http://lattes.cnpq.br/7139685024425123", 
+    foto: fotoMarco  
   },
 ];
 
@@ -51,7 +59,7 @@ const alunos = [
   { 
     nome: "Flávio Romero S. de S. Muniz", 
     cargo: "Discente (Graduação)", 
-    area: "Robótica", 
+    area: "Sistemas Embarcados", 
     lattes: "http://lattes.cnpq.br/9189816041158285", 
     linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
     foto: fotoFlavio 
@@ -67,7 +75,7 @@ const alunos = [
   { 
     nome: "Rafael Rodiani F. Melo", 
     cargo: "Discente (Pós-Graduação)", 
-    area: "Robótica", 
+    area: "Sistemas Embarcados", 
     lattes: "http://lattes.cnpq.br/0148847174850005", 
     linkedin: "#", 
     foto: fotoRafael 
@@ -75,7 +83,7 @@ const alunos = [
   { 
     nome: "Victor Guilherme A. Costa", 
     cargo: "Discente (Graduação)", 
-    area: "Robótica", 
+    area: "Sisteamas Embarcados", 
     lattes: "http://lattes.cnpq.br/0491365749315456", 
     linkedin: "#", 
     foto: fotoVictor 
