@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Waves, Radar, Cpu, ChevronRight, BookOpen, Landmark } from 'lucide-react';
+import { ArrowRight, BookOpen, Landmark } from 'lucide-react';
 
 import logoCNPq from '../assets/logo-parceiros/CNPq.png';
 import logoUFPE from '../assets/logo-parceiros/UFPE.png';

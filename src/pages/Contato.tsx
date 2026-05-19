@@ -1,4 +1,5 @@
-import { useState, FormEvent } from 'react';
+import { useState } from 'react';
+import type { FormEvent } from 'react';
 import { MapPin, Mail, Globe, Send, BookOpen, CalendarDays, Users, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contato() {
