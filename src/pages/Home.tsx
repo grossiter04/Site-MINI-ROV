@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Waves, Radar, Cpu, ChevronRight, BookOpen, Landmark } from 'lucide-react';
+import { ArrowRight, BookOpen, Landmark } from 'lucide-react';
 
 import logoCNPq from '../assets/logo-parceiros/CNPq.png';
 import logoUFPE from '../assets/logo-parceiros/UFPE.png';
@@ -118,52 +118,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. Áreas de Pesquisa */}
-      <section>
-        <div className="mb-10">
-          <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Áreas de Investigação</h2>
-          <div className="w-16 h-1 bg-orange-500 mt-4"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-slate-300 transition-colors flex flex-col h-full">
-            <div className="w-12 h-12 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center mb-6">
-              <Waves className="w-6 h-6" />
+      {/* 2. Reuniões do Grupo de Pesquisa */}
+      <section className="bg-slate-50 border border-slate-200 rounded-2xl p-8 lg:p-12 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div className="lg:col-span-8 space-y-4">
+            <div className="mb-6">
+              <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Reuniões Semanais</h2>
+              <div className="w-16 h-1 bg-orange-500 mt-4"></div>
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">Simultaneous Localization and Mapping (SLAM)</h3>
-            <p className="text-slate-600 text-sm text-justify mb-6 leading-relaxed flex-grow">
-              Investigação de arquiteturas de localização e mapeamento para ambientes com escassez de feições visuais. A pesquisa foca no desacoplamento entre odometria e mapeamento em sistemas fortemente acoplados para mitigar a deriva (drift) em missões de longa duração.
+            <p className="text-slate-600 text-base leading-relaxed text-justify">
+              O nosso corpo de investigadores reúne-se semanalmente com o objetivo de discutir o progresso dos projetos em andamento, realizar sessões de <i>Journal Club</i> para debater artigos recentes da literatura e coordenar o desenvolvimento dos sistemas robóticos subaquáticos. Essas interações promovem a colaboração contínua e o alinhamento científico da equipa.
             </p>
-            <Link to="/pesquisa" className="text-orange-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all mt-auto">
-              Detalhes metodológicos <ChevronRight className="w-4 h-4" />
-            </Link>
+            <p className="text-sm text-slate-400 italic">
+              * Atas, apresentações e cronogramas internos de acompanhamento são centralizados de forma transparente no nosso repositório em nuvem.
+            </p>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-slate-300 transition-colors flex flex-col h-full">
-            <div className="w-12 h-12 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center mb-6">
-              <Radar className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">Fusão de Dados Multimodais</h3>
-            <p className="text-slate-600 text-sm text-justify mb-6 leading-relaxed flex-grow">
-              Modelagem e otimização em grafos de fatores (Factor Graphs) para integração de medições inerciais (IMU), acústicas (DVL, Sonar) e ópticas (LiDAR azul-verde). O objetivo é garantir observabilidade sob falhas sistêmicas de sensores.
-            </p>
-            <Link to="/pesquisa" className="text-orange-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all mt-auto">
-              Detalhes metodológicos <ChevronRight className="w-4 h-4" />
-            </Link>
+          <div className="lg:col-span-4 flex justify-center lg:justify-end w-full">
+            <a 
+              href="https://drive.google.com/drive/folders/1T8B74wf_bj_cHJDDAIDiXBdRmjybGtaZ?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 shadow-md hover:shadow-lg transition-all duration-300 w-full lg:w-auto justify-center"
+            >
+              <span className="text-base">Acompanhar Reuniões</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-slate-300 transition-colors flex flex-col h-full">
-            <div className="w-12 h-12 bg-slate-100 text-slate-700 rounded-lg flex items-center justify-center mb-6">
-              <Cpu className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">Visão Computacional e Deep Learning</h3>
-            <p className="text-slate-600 text-sm text-justify mb-6 leading-relaxed flex-grow">
-              Aplicação de modelos de aprendizagem profunda, incluindo arquiteturas Transformers, associados a priors físicos de atenuação óptica para restauração de imagem e estimativa de profundidade monocular em meios com alta turbidez.
-            </p>
-            <Link to="/pesquisa" className="text-orange-600 text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all mt-auto">
-              Detalhes metodológicos <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </section>
 
