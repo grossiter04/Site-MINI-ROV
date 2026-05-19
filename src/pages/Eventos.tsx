@@ -1,4 +1,5 @@
 import { Calendar, MapPin, Image as ImageIcon, FileText, ExternalLink } from 'lucide-react';
+import { useTranslation } from 'react-i18next'; // Importamos o hook de tradução
 
 // Importação automatizada das imagens via Vite (aponta para src/assets/foto-cross)
 const imagensImportadas = import.meta.glob('../assets/foto-cross/*.{png,jpg,jpeg}', { eager: true, import: 'default' });
@@ -35,13 +36,17 @@ const trabalhosApresentados = [
 ];
 
 export default function Eventos() {
+  const { t } = useTranslation(); // Inicializando a tradução
+
   return (
     <div className="space-y-16 py-12">
       <header className="border-b border-slate-200 pb-8">
         <div className="w-16 h-1 bg-orange-500 mb-4"></div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">Participação em Fóruns Científicos</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
+          {t('eventos.title')}
+        </h1>
         <p className="text-lg text-slate-600 mt-4 max-w-3xl text-justify">
-          Relato de atividades externas, apresentações de comunicações científicas e disseminação de resultados em congressos especializados.
+          {t('eventos.desc')}
         </p>
       </header>
 
@@ -49,13 +54,13 @@ export default function Eventos() {
         <div className="flex flex-col lg:flex-row gap-8 justify-between items-start">
           <div className="space-y-4 max-w-2xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-200 text-slate-700 text-sm font-bold rounded">
-              Apresentação em Destaque
+              {t('eventos.badgeDestaque')}
             </span>
             <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900">
               CROS 2026
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed text-justify">
-              O corpo de investigadores encontra-se presente neste evento de robótica e sistemas autónomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.
+              {t('eventos.destaqueDesc')}
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
@@ -73,7 +78,7 @@ export default function Eventos() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white text-sm font-bold bg-slate-900 hover:bg-orange-600 px-6 py-2 rounded transition-colors"
               >
-                Consultar Programação <ExternalLink className="w-4 h-4" />
+                {t('eventos.btnProgramacao')} <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -83,7 +88,7 @@ export default function Eventos() {
         <div className="mt-12 pt-12 border-t border-slate-200">
           <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
             <ImageIcon className="w-6 h-6 text-orange-500" />
-            Registos do Evento
+            {t('eventos.registosTitle')}
           </h3>
           
           <div className="relative flex overflow-hidden group pb-4">
@@ -95,7 +100,7 @@ export default function Eventos() {
                 >
                   <img 
                     src={caminhoDaFoto} 
-                    alt={`Registo visual do CROS 2026`} 
+                    alt={t('eventos.registosTitle')} 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -108,7 +113,7 @@ export default function Eventos() {
       <section>
         <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
           <span className="w-6 h-1 bg-orange-500"></span>
-          Submissões Apresentadas (Abstracts)
+          {t('eventos.submissoesTitle')}
         </h2>
 
         <div className="space-y-6">

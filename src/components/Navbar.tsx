@@ -1,15 +1,25 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Importamos o hook
+import { Globe } from 'lucide-react'; // Ícone para o botão de idioma
 import logoCesar from '../assets/CESAR_Laranja.png'; 
 
 export default function Navbar() {
   const location = useLocation();
+  const { t, i18n } = useTranslation(); // Inicializamos a tradução
 
+  // Função para alternar o idioma
+  const toggleLanguage = () => {
+    const nextLang = i18n.language.startsWith('pt') ? 'en' : 'pt';
+    i18n.changeLanguage(nextLang);
+  };
+
+  // Agora usamos t('caminho.no.dicionario') em vez do texto fixo
   const navLinks = [
-    { name: 'Início', path: '/' },
-    { name: 'Pesquisa', path: '/pesquisa' },
-    { name: 'Eventos', path: '/eventos' },
-    { name: 'Equipe', path: '/pessoas' },
-    { name: 'Publicações', path: '/publicacoes' },
+    { name: t('navbar.inicio'), path: '/' },
+    { name: t('navbar.pesquisa'), path: '/pesquisa' },
+    { name: t('navbar.eventos'), path: '/eventos' },
+    { name: t('navbar.equipe'), path: '/pessoas' },
+    { name: t('navbar.publicacoes'), path: '/publicacoes' },
   ];
 
   return (
@@ -47,13 +57,24 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Botão de Contato */}
-          <div className="hidden md:flex items-center">
+          {/* Botões da Direita (Idioma + Contato) */}
+          <div className="hidden md:flex items-center gap-4">
+            
+            {/* Botão de Idioma */}
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-orange-600 transition-colors text-sm font-bold uppercase"
+              title="Mudar idioma / Change language"
+            >
+              <Globe className="w-4 h-4" />
+              {i18n.language.startsWith('pt') ? 'EN' : 'PT'}
+            </button>
+
             <Link
               to="/contato"
               className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold rounded-full text-white bg-orange-600 hover:bg-orange-700 shadow-md hover:shadow-lg hover:shadow-orange-500/30 transition-all duration-300"
             >
-              Fale Conosco
+              {t('navbar.contato')}
             </Link>
           </div>
 

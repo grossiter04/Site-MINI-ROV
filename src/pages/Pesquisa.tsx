@@ -1,45 +1,51 @@
 import { Cpu, Globe, Database, BookText, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const linhasInvestigacao = [
-  {
-    id: 1,
-    titulo: "Localização",
-    abordagem: "Investigação de arquiteturas de odometria e estimativa de estado robusta para veículos subaquáticos autónomos (AUVs e ROVs) operando sob condições severas e na ausência de sinal GNSS.",
-    icone: Globe
-  },
-  {
-    id: 2,
-    titulo: "Mapeamento",
-    abordagem: "Desenvolvimento de metodologias e algoritmos para reconstrução tridimensional, mapeamento denso e representação de superfícies em ambientes subaquáticos confinados ou de baixa visibilidade.",
-    icone: Database
-  },
-  {
-    id: 3,
-    titulo: "Fusão de Sensores",
-    abordagem: "Modelagem de sistemas de fusão multimodal e otimização baseada em grafos de fatores (Factor Graphs) para integrar medições inerciais (IMU), acústicas (DVL, Sonar) e ópticas.",
-    icone: Cpu
-  },
-  {
-    id: 4,
-    titulo: "Identificação de Bio Invasores Marinhos (Coral-sol)",
-    abordagem: "Aplicação de modelos avançados de visão computacional e redes neurais profundas (Deep Learning) voltados à deteção, segmentação e monitorização automatizada do coral-sol em ecossistemas marinhos.",
-    icone: Eye
-  }
-];
+import { useTranslation } from 'react-i18next'; // Importamos o hook
 
 export default function Pesquisa() {
+  const { t } = useTranslation(); // Inicializando a tradução
+
+  // Array dinâmico com chaves traduzíveis para os quatro temas solicitados
+  const linhasInvestigacao = [
+    {
+      id: 1,
+      titulo: t('pesquisa.linhas.localizacao.titulo'),
+      abordagem: t('pesquisa.linhas.localizacao.abordagem'),
+      icone: Globe
+    },
+    {
+      id: 2,
+      titulo: t('pesquisa.linhas.mapeamento.titulo'),
+      abordagem: t('pesquisa.linhas.mapeamento.abordagem'),
+      icone: Database
+    },
+    {
+      id: 3,
+      titulo: t('pesquisa.linhas.fusao.titulo'),
+      abordagem: t('pesquisa.linhas.fusao.abordagem'),
+      icone: Cpu
+    },
+    {
+      id: 4,
+      titulo: t('pesquisa.linhas.bio.titulo'),
+      abordagem: t('pesquisa.linhas.bio.abordagem'),
+      icone: Eye
+    }
+  ];
+
   return (
     <div className="space-y-16 py-12">
       <header className="border-b border-slate-200 pb-8">
         <div className="w-16 h-1 bg-orange-500 mb-4"></div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">Linhas de Investigação Científica</h1>
+        <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
+          {t('pesquisa.title')}
+        </h1>
         <p className="text-lg text-slate-600 mt-4 max-w-3xl text-justify">
-          As nossas frentes de investigação concentram-se na proposição e validação de artefactos tecnológicos para a autonomia robótica em ambientes severos, seguindo rigorosamente o paradigma da Design Science Research (DSR).
+          {t('pesquisa.desc')}
         </p>
       </header>
 
-      {/* Grid configurado em 2x2 para acomodar perfeitamente os 4 novos temas */}
+      {/* Grid estruturado em 2x2 */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {linhasInvestigacao.map((linha) => {
           const Icon = linha.icone;
@@ -59,12 +65,14 @@ export default function Pesquisa() {
 
       <section className="bg-slate-900 text-white p-10 rounded-lg text-center">
         <BookText className="w-10 h-10 mx-auto mb-6 text-orange-500" />
-        <h2 className="text-2xl font-bold mb-4">Evidência Científica</h2>
+        <h2 className="text-2xl font-bold mb-4">
+          {t('pesquisa.evidenciaTitle')}
+        </h2>
         <p className="text-slate-400 max-w-2xl mx-auto mb-8">
-          Todas as investigações são suportadas e validadas através de publicações em veículos de alto impacto e conferências internacionais submetidas a revisão por pares (peer-review).
+          {t('pesquisa.evidenciaDesc')}
         </p>
         <Link to="/publicacoes" className="inline-block px-8 py-3 bg-orange-600 font-bold rounded-lg hover:bg-orange-700 transition-colors">
-          Consultar Repositório Bibliográfico
+          {t('pesquisa.btnRepositorio')}
         </Link>
       </section>
     </div>
