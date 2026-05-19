@@ -1,4 +1,5 @@
 import { FileText, Mail } from 'lucide-react'; 
+import { useTranslation } from 'react-i18next';
 
 // Imports estáticos corretos para o Vite
 import fotoFernando from '../assets/Fernando_Carvalho_Foto.png';
@@ -9,88 +10,90 @@ import fotoVictor from '../assets/Victor_Costa_Foto.png';
 import fotoBeto from '../assets/Beto_Macedo_Foto.png';
 import fotoMarco from '../assets/Marco_Antonio_Foto.png';
 
-const coordenacao = [
-  {
-    nome: "Fernando F. de Carvalho",
-    cargo: "Investigador Principal / Coordenador",
-    area: "Engenharia de Software, IoT e Robótica",
-    email: "ffc@cesar.school",
-    lattes: "http://lattes.cnpq.br/8491797408318076",
-    linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
-    foto: fotoFernando
-  }, 
-];
-
-const pesquisadores = [
-  { 
-    nome: "Fernando F. de Carvalho", 
-    cargo: "Investigador Associado", 
-    area: "Engenharia de Software, IoT e Robótica", 
-    lattes: "http://lattes.cnpq.br/8491797408318076", 
-    linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/", 
-    foto: fotoFernando 
-  },
-  { 
-    nome: "Benedito Alberto Macedo", 
-    cargo: "Investigador Associado", 
-    area: "Gestor e desenvolvedor de Software", 
-    lattes: "http://lattes.cnpq.br/5699536418012791", 
-    linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
-    foto: fotoBeto  
-  },
-  { 
-    nome: "Marco A. de Oliveira Domingues", 
-    cargo: "Desenvolvedor de Software", 
-    area: "Visão Computacional e Robótica", 
-    lattes: "http://lattes.cnpq.br/7139685024425123", 
-    foto: fotoMarco  
-  },
-];
-
-const alunos = [
-  { 
-    nome: "Eduardo M. Fontelles", 
-    cargo: "Discente (Graduação)", 
-    area: "Robótica", 
-    lattes: "#", 
-    linkedin: "#", 
-    foto: null 
-  },
-  { 
-    nome: "Flávio Romero S. de S. Muniz", 
-    cargo: "Discente (Graduação)", 
-    area: "Sistemas Embarcados", 
-    lattes: "http://lattes.cnpq.br/9189816041158285", 
-    linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
-    foto: fotoFlavio 
-  },
-  { 
-    nome: "Lisa Matubara", 
-    cargo: "Discente (Graduação)", 
-    area: "Desenvolvedora Backend", 
-    lattes: "http://lattes.cnpq.br/0545406300374038", 
-    linkedin: "https://www.linkedin.com/in/lisa-matubara/", 
-    foto: fotoLisa 
-  },
-  { 
-    nome: "Rafael Rodiani F. Melo", 
-    cargo: "Discente (Pós-Graduação)", 
-    area: "Sistemas Embarcados", 
-    lattes: "http://lattes.cnpq.br/0148847174850005", 
-    linkedin: "#", 
-    foto: fotoRafael 
-  },
-  { 
-    nome: "Victor Guilherme A. Costa", 
-    cargo: "Discente (Graduação)", 
-    area: "Sisteamas Embarcados", 
-    lattes: "http://lattes.cnpq.br/0491365749315456", 
-    linkedin: "#", 
-    foto: fotoVictor 
-  },
-];
-
 export default function Pessoas() {
+  const { t } = useTranslation();
+
+  const coordenacao = [
+    {
+      nome: "Fernando F. de Carvalho",
+      cargo: t('equipe.cargos.invPrincipal'),
+      area: t('equipe.areas.engSoftware'),
+      email: "ffc@cesar.school",
+      lattes: "http://lattes.cnpq.br/8491797408318076",
+      linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
+      foto: fotoFernando
+    }, 
+  ];
+
+  const pesquisadores = [
+    { 
+      nome: "Fernando F. de Carvalho", 
+      cargo: t('equipe.cargos.invAssociado'), 
+      area: t('equipe.areas.engSoftware'), 
+      lattes: "http://lattes.cnpq.br/8491797408318076", 
+      linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/", 
+      foto: fotoFernando 
+    },
+    { 
+      nome: "Benedito Alberto Macedo", 
+      cargo: t('equipe.cargos.invAssociado'), 
+      area: t('equipe.areas.gestorDev'), 
+      lattes: "http://lattes.cnpq.br/5699536418012791", 
+      linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
+      foto: fotoBeto  
+    },
+    { 
+      nome: "Marco A. de Oliveira Domingues", 
+      cargo: t('equipe.cargos.devSoftware'), 
+      area: t('equipe.areas.visaoComp'), 
+      lattes: "http://lattes.cnpq.br/7139685024425123", 
+      foto: fotoMarco  
+    },
+  ];
+
+  const alunos = [
+    { 
+      nome: "Eduardo M. Fontelles", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.robotica'), 
+      lattes: "#", 
+      linkedin: "#", 
+      foto: null 
+    },
+    { 
+      nome: "Flávio Romero S. de S. Muniz", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.sistEmbarcados'), 
+      lattes: "http://lattes.cnpq.br/9189816041158285", 
+      linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
+      foto: fotoFlavio 
+    },
+    { 
+      nome: "Lisa Matubara", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.devBackend'), 
+      lattes: "http://lattes.cnpq.br/0545406300374038", 
+      linkedin: "https://www.linkedin.com/in/lisa-matubara/", 
+      foto: fotoLisa 
+    },
+    { 
+      nome: "Rafael Rodiani F. Melo", 
+      cargo: t('equipe.cargos.discPos'), 
+      area: t('equipe.areas.sistEmbarcados'), 
+      lattes: "http://lattes.cnpq.br/0148847174850005", 
+      linkedin: "#", 
+      foto: fotoRafael 
+    },
+    { 
+      nome: "Victor Guilherme A. Costa", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.sistEmbarcados'), 
+      lattes: "http://lattes.cnpq.br/0491365749315456", 
+      linkedin: "#", 
+      foto: fotoVictor 
+    },
+  ];
+
   return (
     <div className="space-y-16 py-12">
       
@@ -98,16 +101,16 @@ export default function Pessoas() {
       <header className="border-b border-slate-200 pb-8">
         <div className="w-16 h-1 bg-orange-500 mb-4"></div>
         <h1 className="text-4xl font-extrabold tracking-tight text-slate-900">
-          Corpo de Investigadores
+          {t('equipe.title')}
         </h1>
         <p className="text-lg text-slate-600 mt-4 max-w-3xl leading-relaxed text-justify">
-          Composição multidisciplinar focada na produção de conhecimento científico original e na formação avançada de recursos humanos para o setor de robótica autônoma.
+          {t('equipe.desc')}
         </p>
       </header>
 
       {/* Seção Coordenação */}
       <section>
-        <SectionTitle>Coordenação Científica</SectionTitle>
+        <SectionTitle>{t('equipe.sections.coordenacao')}</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {coordenacao.map((p, i) => <CardDiretorio key={i} pessoa={p} destaque />)}
         </div>
@@ -115,7 +118,7 @@ export default function Pessoas() {
 
       {/* Seção Investigadores */}
       <section>
-        <SectionTitle>Investigadores Associados</SectionTitle>
+        <SectionTitle>{t('equipe.sections.pesquisadores')}</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pesquisadores.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
         </div>
@@ -123,7 +126,7 @@ export default function Pessoas() {
 
       {/* Seção Discentes */}
       <section>
-        <SectionTitle>Discentes e Assistentes de Pesquisa</SectionTitle>
+        <SectionTitle>{t('equipe.sections.alunos')}</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {alunos.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
         </div>
@@ -133,7 +136,7 @@ export default function Pessoas() {
   );
 }
 
-// Subcomponente de Título de Seção
+// Subcomponente de Título de Seção (MANTIDO ORIGINAL)
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
@@ -143,7 +146,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Subcomponente: Placeholder Formal (Quadrado)
+// Subcomponente: Placeholder Formal (Quadrado) (MANTIDO ORIGINAL)
 function FormalPlaceholder() {
   return (
     <div className="w-full h-full flex items-center justify-center bg-slate-100 text-slate-300 border border-slate-200 rounded">
@@ -154,7 +157,7 @@ function FormalPlaceholder() {
   );
 }
 
-// Subcomponente de Card Unificado (Formato Diretório Acadêmico)
+// Subcomponente de Card Unificado (Formato Diretório Acadêmico) (MANTIDO ORIGINAL)
 function CardDiretorio({ pessoa, destaque = false }: { pessoa: any, destaque?: boolean }) {
   return (
     <div className={`bg-white border border-slate-200 rounded-lg p-6 flex items-start gap-5 shadow-sm hover:border-slate-300 transition-colors ${destaque ? 'md:col-span-1' : ''}`}>
@@ -198,7 +201,7 @@ function CardDiretorio({ pessoa, destaque = false }: { pessoa: any, destaque?: b
   );
 }
 
-// Subcomponente de Link Simples
+// Subcomponente de Link Simples (MANTIDO ORIGINAL)
 interface IconLinkProps { href: string; icon: React.ElementType; label: string; }
 
 function IconLink({ href, icon: Icon, label }: IconLinkProps) {
@@ -216,7 +219,7 @@ function IconLink({ href, icon: Icon, label }: IconLinkProps) {
   );
 }
 
-// Ícone Customizado para LinkedIn
+// Ícone Customizado para LinkedIn (MANTIDO ORIGINAL)
 function LinkedinIcon({ className }: { className?: string }) {
   return (
     <svg 
