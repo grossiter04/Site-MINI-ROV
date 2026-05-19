@@ -1,6 +1,38 @@
-import { MapPin, Mail, Globe, Send, BookOpen, CalendarDays, Users } from 'lucide-react';
+import { useState, FormEvent } from 'react';
+import { MapPin, Mail, Globe, Send, BookOpen, CalendarDays, Users, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Contato() {
+  // Estados para gerir o fluxo de submissão do formulário
+  const [status, setStatus] = useState<'IDLE' | 'SUBMITTING' | 'SUCCESS' | 'ERROR'>('IDLE');
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('SUBMITTING');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      // Substitua o ID final pelo ID real do seu formulário no Formspree
+      const response = await fetch('https://formspree.io/f/xkoegale', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setStatus('SUCCESS');
+        form.reset(); // Limpa os campos após o envio com sucesso
+      } else {
+        setStatus('ERROR');
+      }
+    } catch (error) {
+      setStatus('ERROR');
+    }
+  };
+
   return (
     <div className="space-y-16 py-12">
       
@@ -13,7 +45,7 @@ export default function Contato() {
         </p>
       </header>
 
-      {/* NOVA SEÇÃO: Modelo Stanford (Laboratório Aberto) e Agendas */}
+      {/* Seção: Modelo Stanford (Laboratório Aberto) e Agendas */}
       <section className="bg-slate-50 border border-slate-200 rounded-lg p-8 lg:p-12">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           <div className="flex-1 space-y-6">
@@ -22,7 +54,7 @@ export default function Contato() {
             </div>
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">Agendas de Pesquisa e Participação</h2>
             <p className="text-slate-600 leading-relaxed text-justify">
-              Inspirado no modelo de excelência dos principais laboratórios internacionais, o nosso grupo adota uma política de participação aberta. <strong>Não é necessário aguardar a publicação de editais formais para integrar a equipa.</strong> O ingresso voluntário é encorajado, e o primeiro passo é a participação ativa como ouvinte ou colaborador nas nossas reuniões e discussões científicas.
+              Inspirado no modelo de excelência dos principais laboratórios internacionais, o nosso grupo adota uma política de participação aberta. <strong>Não é necessário aguardar a publicação de editais formais para integrar a equipa.</strong> O ingresso voluntário é encorajado, e o primeiro passo é a participação activa como ouvinte ou colaborador nas nossas reuniões e discussões científicas.
             </p>
 
             {/* Cronograma de Encontros */}
@@ -40,7 +72,6 @@ export default function Contato() {
                     Quarta-Feira • 14h30
                   </span>
                 </div>
-                
               </div>
               <p className="text-xs text-slate-400 mt-2 italic">
                 * As reuniões ocorrem nas instalações da CESAR com possibilidade de acompanhamento híbrido/remoto. Utilize o formulário abaixo para solicitar o link de acesso.
@@ -57,7 +88,6 @@ export default function Contato() {
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-6">Canais e Registos Oficiais</h2>
 
-          {/* NOVO: Card CNPq (Destaque Principal) */}
           <div className="bg-white border-2 border-orange-200 p-6 rounded-lg flex gap-5 shadow-sm hover:border-orange-400 hover:shadow-md transition-all">
             <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded flex items-center justify-center flex-shrink-0">
               <BookOpen className="w-6 h-6" />
@@ -105,11 +135,11 @@ export default function Contato() {
           </div>
         </div>
 
-        {/* Coluna Direita: Formulário Institucional */}
+        {/* Coluna Direita: Formulário Institucional Dinâmico */}
         <div className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm h-fit">
           <h3 className="text-xl font-bold text-slate-900 mb-6">Submissão de Consultas e Ingresso</h3>
           
-          <form action="COLE_O_SEU_LINK_DO_FORMSPREE_AQUI" method="POST" className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="space-y-1.5">
                 <label htmlFor="nome" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Investigador / Aluno</label>
@@ -124,10 +154,10 @@ export default function Contato() {
             <div className="space-y-1.5">
               <label htmlFor="assunto" className="text-xs font-bold text-slate-500 uppercase tracking-wider">Natureza do Contacto</label>
               <select id="assunto" name="assunto" className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50 text-slate-700">
-                <option>Interesse em Participação Voluntária (Reuniões)</option>
-                <option>Proposta de Cooperação Científica</option>
-                <option>Interesse em Programas de Pós-Graduação</option>
-                <option>Solicitação de Dados / Repositórios</option>
+                <option value="Interesse em Participação Voluntária (Reuniões)">Interesse em Participação Voluntária (Reuniões)</option>
+                <option value="Proposta de Cooperação Científica">Proposta de Cooperação Científica</option>
+                <option value="Interesse em Programas de Pós-Graduação">Interesse em Programas de Pós-Graduação</option>
+                <option value="Solicitação de Dados / Repositórios">Solicitação de Dados / Repositórios</option>
               </select>
             </div>
 
@@ -136,9 +166,28 @@ export default function Contato() {
               <textarea id="mensagem" name="mensagem" required rows={4} className="w-full px-4 py-3 rounded border border-slate-200 focus:outline-none focus:border-slate-400 bg-slate-50 resize-none" placeholder="Apresente-se e descreva o propósito do seu contacto..."></textarea>
             </div>
 
-            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded hover:bg-orange-600 transition-colors duration-300">
+            {/* Banners Informativos de Feedback */}
+            {status === 'SUCCESS' && (
+              <div className="flex items-center gap-2 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded text-sm font-medium animate-fadeIn">
+                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <span>Mensagem enviada com sucesso! Entraremos em contacto brevemente.</span>
+              </div>
+            )}
+
+            {status === 'ERROR' && (
+              <div className="flex items-center gap-2 p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded text-sm font-medium animate-fadeIn">
+                <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
+                <span>Ocorreu um erro ao enviar. Por favor, tente novamente ou envie um email direto.</span>
+              </div>
+            )}
+
+            <button 
+              type="submit" 
+              disabled={status === 'SUBMITTING'}
+              className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded hover:bg-orange-600 transition-colors duration-300 disabled:bg-slate-400 disabled:cursor-not-allowed"
+            >
               <Send className="w-4 h-4" />
-              Submeter Solicitação
+              {status === 'SUBMITTING' ? 'A enviar...' : 'Submeter Solicitação'}
             </button>
           </form>
         </div>

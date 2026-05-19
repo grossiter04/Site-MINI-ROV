@@ -1,24 +1,30 @@
-import { Cpu, Globe, Database, BookText } from 'lucide-react';
+import { Cpu, Globe, Database, BookText, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const linhasInvestigacao = [
   {
     id: 1,
-    titulo: "SLAM em Ambientes Subaquáticos Confinados",
-    abordagem: "Investigamos arquiteturas de localização e mapeamento (SLAM) híbridas, avaliando o desacoplamento entre odometria visual-inercial e acústica para garantir a resiliência em cenários de baixa visibilidade.",
+    titulo: "Localização",
+    abordagem: "Investigação de arquiteturas de odometria e estimativa de estado robusta para veículos subaquáticos autónomos (AUVs e ROVs) operando sob condições severas e na ausência de sinal GNSS.",
     icone: Globe
   },
   {
     id: 2,
-    titulo: "Fusão Multimodal e LiDAR Azul-Verde",
-    abordagem: "Propomos a fusão de dados de LiDAR azul-verde (532 nm) com DVL e IMU através de grafos de fatores (factor graphs) para uma reconstrução métrica robusta e contínua.",
-    icone: Cpu
+    titulo: "Mapeamento",
+    abordagem: "Desenvolvimento de metodologias e algoritmos para reconstrução tridimensional, mapeamento denso e representação de superfícies em ambientes subaquáticos confinados ou de baixa visibilidade.",
+    icone: Database
   },
   {
     id: 3,
-    titulo: "Percepção Profunda com Arquiteturas Transformer",
-    abordagem: "Avaliamos modelos baseados em Transformers para a captura de contexto global, associados a modelos físicos da formação da imagem subaquática, para a estimativa de profundidade monocular.",
-    icone: Database
+    titulo: "Fusão de Sensores",
+    abordagem: "Modelagem de sistemas de fusão multimodal e otimização baseada em grafos de fatores (Factor Graphs) para integrar medições inerciais (IMU), acústicas (DVL, Sonar) e ópticas.",
+    icone: Cpu
+  },
+  {
+    id: 4,
+    titulo: "Identificação de Bio Invasores Marinhos (Coral-sol)",
+    abordagem: "Aplicação de modelos avançados de visão computacional e redes neurais profundas (Deep Learning) voltados à deteção, segmentação e monitorização automatizada do coral-sol em ecossistemas marinhos.",
+    icone: Eye
   }
 ];
 
@@ -33,17 +39,18 @@ export default function Pesquisa() {
         </p>
       </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Grid configurado em 2x2 para acomodar perfeitamente os 4 novos temas */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {linhasInvestigacao.map((linha) => {
           const Icon = linha.icone;
           return (
-            <div key={linha.id} className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm">
+            <div key={linha.id} className="bg-white border border-slate-200 p-8 rounded-lg shadow-sm hover:border-orange-300 transition-colors">
               <div className="w-12 h-12 bg-slate-50 text-orange-600 rounded flex items-center justify-center mb-6">
                 <Icon className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-4">{linha.titulo}</h3>
               <div className="space-y-4">
-                <p className="text-sm text-slate-600 text-justify"> {linha.abordagem}</p>
+                <p className="text-sm text-slate-600 text-justify">{linha.abordagem}</p>
               </div>
             </div>
           );
