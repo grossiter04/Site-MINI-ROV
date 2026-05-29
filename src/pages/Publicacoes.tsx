@@ -38,7 +38,7 @@ export default function Publicacoes() {
     {
       id: 4,
       titulo: "Underwater Localization in Low-Texture Environments: Review, State of the Art and Perspectives",
-      autores: "Equipa de Investigação CESAR / CEFET-RJ",
+      autores: "Equipe de Investigação CESAR / CEFET-RJ",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
       linkPdf: "#",

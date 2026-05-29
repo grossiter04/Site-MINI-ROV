@@ -108,7 +108,7 @@ export const en = {
       cronoTitle: "Meeting Schedule (Open to the Community)",
       reuniaoTitle: "General Meeting",
       reuniaoDesc: "Presentation of results, project updates, and onboarding of new researchers.",
-      reuniaoData: "Wednesday • 14:30",
+      reuniaoData: "Tuesday • 14:30",
       nota: "* Meetings take place at CESAR facilities with the possibility of hybrid/remote attendance. Use the form below to request the access link."
     },
     canais: {
