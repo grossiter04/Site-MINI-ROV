@@ -53,7 +53,7 @@ export const pt = {
     title: "Participação em Fóruns Científicos",
     desc: "Relato de atividades externas, apresentações de comunicações científicas e disseminação de resultados em congressos especializados.",
     badgeDestaque: "Apresentação em Destaque",
-    destaqueDesc: "O corpo de investigadores encontra-se presente neste evento de robótica e sistemas autónomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.",
+    destaqueDesc: "O corpo de investigadores encontra-se presente neste evento de robótica e sistemas autônomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.",
     btnProgramacao: "Consultar Programação",
     registosTitle: "Registos do Evento",
     submissoesTitle: "Submissões Apresentadas (Abstracts)"
@@ -98,17 +98,17 @@ export const pt = {
 
   contato: {
     title: "Comunicação e Ingresso",
-    desc: "Canais institucionais para cooperação científica, intercâmbio académico e informações sobre o ingresso voluntário nas atividades do grupo.",
+    desc: "Canais institucionais para cooperação científica, intercâmbio acadêmico e informações sobre o ingresso voluntário nas atividades do grupo.",
     lab: {
       badge: "Laboratório de Portas Abertas",
       title: "Agendas de Pesquisa e Participação",
       desc1: "Inspirado no modelo de excelência dos principais laboratórios internacionais, o nosso grupo adota uma política de participação aberta. ",
-      descBold: "Não é necessário aguardar a publicação de editais formais para integrar a equipa.",
+      descBold: "Não é necessário aguardar a publicação de editais formais para integrar a equipe.",
       desc2: " O ingresso voluntário é encorajado, e o primeiro passo é a participação ativa como ouvinte ou colaborador nas nossas reuniões e discussões científicas.",
       cronoTitle: "Cronograma de Encontros (Abertos à Comunidade)",
       reuniaoTitle: "Reunião Geral",
       reuniaoDesc: "Apresentação de resultados, atualizações de projetos e onboarding de novos investigadores.",
-      reuniaoData: "Quarta-Feira • 14h30",
+      reuniaoData: "Terça-Feira • 14h30",
       nota: "* As reuniões ocorrem nas instalações da CESAR com possibilidade de acompanhamento híbrido/remoto. Utilize o formulário abaixo para solicitar o link de acesso."
     },
     canais: {
@@ -118,13 +118,13 @@ export const pt = {
       cnpqBtn: "Aceder ao Espelho do Grupo",
       enderecoTitle: "Endereço Postal",
       caixaPostal: "Caixa Postal",
-      emailTitle: "Correio Eletrónico"
+      emailTitle: "Correio Eletrônico"
     },
     form: {
       title: "Submissão de Consultas e Ingresso",
       nomeLabel: "Investigador / Aluno",
       nomePlaceholder: "Nome completo",
-      emailLabel: "Correio Eletrónico",
+      emailLabel: "Correio Eletrônico",
       emailPlaceholder: "exemplo@instituicao.edu",
       assuntoLabel: "Natureza do Contacto",
       assuntoOptions: {
