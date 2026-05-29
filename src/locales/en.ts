@@ -27,7 +27,7 @@ export const en = {
     title: "Scientific Research Lines",
     desc: "Our research fronts focus on the proposal and validation of technological artifacts for robotic autonomy in harsh environments, strictly following the Design Science Research (DSR) paradigm.",
     evidenciaTitle: "Scientific Evidence",
-    evidenciaDesc: "All investigations are supported and validated through publications in high-impact vehicles and international peer-reviewed conferences.",
+    evidenciaDesc: "All investigations are supported and validated through publications in high-impact venues and international peer-reviewed conferences.",
     btnRepositorio: "Consult Bibliographic Repository",
     linhas: {
       localizacao: {
@@ -43,7 +43,7 @@ export const en = {
         abordagem: "Modeling of multimodal fusion systems and factor graph-based optimization to integrate inertial (IMU), acoustic (DVL, Sonar), and optical measurements."
       },
       bio: {
-        titulo: "Identification of Marine Bio-Invasors (Sun Coral)",
+        titulo: "Identification of Marine Bio-Invaders (Sun Coral)",
         abordagem: "Application of advanced computer vision models and deep neural networks (Deep Learning) aimed at the automated detection, segmentation, and monitoring of sun coral in marine ecosystems."
       }
     }
