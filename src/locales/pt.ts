@@ -15,7 +15,7 @@ export const pt = {
     btnPubs: "Repositório de Publicações",
     parceirosTitle: "Parcerias e Apoio Institucional",
     reunioesTitle: "Reuniões Semanais",
-    reunioesDesc: "O nosso corpo de investigadores reúne-se semanalmente com o objetivo de discutir o progresso dos projetos em andamento, realizar sessões de Journal Club para debater artigos recentes da literatura e coordenar o desenvolvimento dos sistemas robóticos subaquáticos. Essas interações promovem a colaboração contínua e o alinhamento científico da equipa.",
+    reunioesDesc: "O nosso corpo de pesquisadores reúne-se semanalmente com o objetivo de discutir o progresso dos projetos em andamento, realizar sessões de Journal Club para debater artigos recentes da literatura e coordenar o desenvolvimento dos sistemas robóticos subaquáticos. Essas interações promovem a colaboração contínua e o alinhamento científico da equipe.",
     reunioesNota: "* Atas, apresentações e cronogramas internos de acompanhamento são centralizados de forma transparente no nosso repositório em nuvem.",
     btnReunioes: "Acompanhar Reuniões",
     comunicacoesTitle: "Comunicações em Congressos e Seminários",
@@ -25,7 +25,7 @@ export const pt = {
   },
   pesquisa: {
     title: "Linhas de Investigação Científica",
-    desc: "As nossas frentes de investigação concentram-se na proposição e validação de artefactos tecnológicos para a autonomia robótica em ambientes severos, seguindo rigorosamente o paradigma da Design Science Research (DSR).",
+    desc: "As nossas frentes de investigação concentram-se na proposição e validação de artefatos tecnológicos para a autonomia robótica em ambientes severos, seguindo rigorosamente o paradigma da Design Science Research (DSR).",
     evidenciaTitle: "Evidência Científica",
     evidenciaDesc: "Todas as investigações são suportadas e validadas através de publicações em veículos de alto impacto e conferências internacionais submetidas a revisão por pares (peer-review).",
     btnRepositorio: "Consultar Repositório Bibliográfico",
@@ -43,8 +43,8 @@ export const pt = {
         abordagem: "Modelagem de sistemas de fusão multimodal e otimização baseada em grafos de fatores (Factor Graphs) para integrar medições inerciais (IMU), acústicas (DVL, Sonar) e ópticas."
       },
       bio: {
-        titulo: "Identificação de Bio Invasores Marinhos (Coral-sol)",
-        abordagem: "Aplicação de modelos avançados de visão computacional e redes neurais profundas (Deep Learning) voltados à deteção, segmentação e monitorização automatizada do coral-sol em ecossistemas marinhos."
+        titulo: "Identificação de Bioinvasores Marinhos (Coral-sol)",
+        abordagem: "Aplicação de modelos avançados de visão computacional e redes neurais profundas (Deep Learning) voltados à detecção, segmentação e monitoramento automatizado do coral-sol em ecossistemas marinhos."
       }
     }
   }, 
@@ -53,18 +53,18 @@ export const pt = {
     title: "Participação em Fóruns Científicos",
     desc: "Relato de atividades externas, apresentações de comunicações científicas e disseminação de resultados em congressos especializados.",
     badgeDestaque: "Apresentação em Destaque",
-    destaqueDesc: "O corpo de investigadores encontra-se presente neste evento de robótica e sistemas autônomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.",
+    destaqueDesc: "O corpo de pesquisadores encontra-se presente neste evento de robótica e sistemas autônomos, submetendo e apresentando artigos científicos orientados para o mapeamento e SLAM, fusão de sensores LiDAR e integração de modelos Transformer aplicados a ambientes subaquáticos severos.",
     btnProgramacao: "Consultar Programação",
     registosTitle: "Registos do Evento",
     submissoesTitle: "Submissões Apresentadas (Abstracts)"
   },
 
   equipe: {
-    title: "Corpo de Investigadores",
+    title: "Corpo de pesquisadores",
     desc: "Composição multidisciplinar focada na produção de conhecimento científico original e na formação avançada de recursos humanos para o setor de robótica autônoma.",
     sections: {
       coordenacao: "Coordenação Científica",
-      pesquisadores: "Investigadores Associados",
+      pesquisadores: "pesquisadores Associados",
       alunos: "Discentes e Assistentes de Pesquisa"
     },
     cargos: {
@@ -91,7 +91,7 @@ export const pt = {
     labels: {
       autores: "Autores",
       abstract: "Abstract",
-      btnPdf: "Aceder ao Documento (PDF)",
+      btnPdf: "Acessar ao Documento (PDF)",
       btnDoi: "Referência DOI"
     }
   },
@@ -107,7 +107,7 @@ export const pt = {
       desc2: " O ingresso voluntário é encorajado, e o primeiro passo é a participação ativa como ouvinte ou colaborador nas nossas reuniões e discussões científicas.",
       cronoTitle: "Cronograma de Encontros (Abertos à Comunidade)",
       reuniaoTitle: "Reunião Geral",
-      reuniaoDesc: "Apresentação de resultados, atualizações de projetos e onboarding de novos investigadores.",
+      reuniaoDesc: "Apresentação de resultados, atualizações de projetos e onboarding de novos pesquisadores.",
       reuniaoData: "Terça-Feira • 14h30",
       nota: "* As reuniões ocorrem nas instalações da CESAR com possibilidade de acompanhamento híbrido/remoto. Utilize o formulário abaixo para solicitar o link de acesso."
     },
@@ -115,7 +115,7 @@ export const pt = {
       title: "Canais e Registos Oficiais",
       cnpqTitle: "Diretório DGP / CNPq",
       cnpqDesc: "Consulte o espelho oficial do nosso grupo de pesquisa no Conselho Nacional de Desenvolvimento Científico e Tecnológico.",
-      cnpqBtn: "Aceder ao Espelho do Grupo",
+      cnpqBtn: "Acessar ao Espelho do Grupo",
       enderecoTitle: "Endereço Postal",
       caixaPostal: "Caixa Postal",
       emailTitle: "Correio Eletrônico"
@@ -126,7 +126,7 @@ export const pt = {
       nomePlaceholder: "Nome completo",
       emailLabel: "Correio Eletrônico",
       emailPlaceholder: "exemplo@instituicao.edu",
-      assuntoLabel: "Natureza do Contacto",
+      assuntoLabel: "Natureza do Contato",
       assuntoOptions: {
         opt1: "Interesse em Participação Voluntária (Reuniões)",
         opt2: "Proposta de Cooperação Científica",
@@ -134,8 +134,8 @@ export const pt = {
         opt4: "Solicitação de Dados / Repositórios"
       },
       msgLabel: "Mensagem",
-      msgPlaceholder: "Apresente-se e descreva o propósito do seu contacto...",
-      feedbackSuccess: "Mensagem enviada com sucesso! Entraremos em contacto brevemente.",
+      msgPlaceholder: "Apresente-se e descreva o propósito do seu Contato...",
+      feedbackSuccess: "Mensagem enviada com sucesso! Entraremos em Contato brevemente.",
       feedbackError: "Ocorreu um erro ao enviar. Por favor, tente novamente ou envie um email direto.",
       btnSending: "A enviar...",
       btnSubmit: "Submeter Solicitação"
