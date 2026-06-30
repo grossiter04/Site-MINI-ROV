@@ -64,8 +64,9 @@ export const pt = {
     desc: "Composição multidisciplinar focada na produção de conhecimento científico original e na formação avançada de recursos humanos para o setor de robótica autônoma.",
     sections: {
       coordenacao: "Coordenação Científica",
-      pesquisadores: "pesquisadores Associados",
-      alunos: "Discentes e Assistentes de Pesquisa"
+      pesquisadores: "Investigadores Associados",
+      alunos: "Discentes",
+      alumni: "Alumni (Pesquisadores Egressos)" 
     },
     cargos: {
       invPrincipal: "Investigador Principal / Coordenador",
@@ -80,7 +81,11 @@ export const pt = {
       visaoComp: "Visão Computacional e Robótica",
       robotica: "Robótica",
       sistEmbarcados: "Sistemas Embarcados",
-      devBackend: "Desenvolvedora Backend"
+      devBackend: "Desenvolvedora Backend",
+      navegation: "Navegação",
+      fusaoSensores: "Fusão de Sensores e Percepção Multimodal",
+      mapeamento3D: "Mapeamento 3D e Reconstrução de Ambientes",
+      bioinvasores: "Detecção de Bioinvasores Marinhos"
     }
   },
 

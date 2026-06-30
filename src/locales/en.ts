@@ -65,7 +65,8 @@ export const en = {
     sections: {
       coordenacao: "Scientific Coordination",
       pesquisadores: "Associate Researchers",
-      alunos: "Students and Research Assistants"
+      alunos: "Students",
+      alumni: "Alumni (Former Members)" 
     },
     cargos: {
       invPrincipal: "Principal Investigator / Coordinator",
@@ -80,7 +81,11 @@ export const en = {
       visaoComp: "Computer Vision and Robotics",
       robotica: "Robotics",
       sistEmbarcados: "Embedded Systems",
-      devBackend: "Backend Developer"
+      devBackend: "Backend Developer",
+      navegation: "Navigation",
+      fusaoSensores: "Sensor Fusion and Multimodal Perception",
+      mapeamento3D: "3D Mapping and Environment Reconstruction",
+      bioinvasores: "Detection of Marine Bio-Invaders"
     }
   },
 

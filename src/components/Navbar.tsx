@@ -67,7 +67,7 @@ export default function Navbar() {
               title="Mudar idioma / Change language"
             >
               <Globe className="w-4 h-4" />
-              {i18n.language.startsWith('pt') ? 'EN' : 'PT'}
+              {i18n.language.startsWith('pt') ? 'PT' : 'EN'}
             </button>
 
             <Link

@@ -9,6 +9,11 @@ import fotoRafael from '../assets/Rafael_Melo_Foto.png';
 import fotoVictor from '../assets/Victor_Costa_Foto.png';
 import fotoBeto from '../assets/Beto_Macedo_Foto.png';
 import fotoMarco from '../assets/Marco_Antonio_Foto.png';
+import fotoAline from '../assets/Aline_Takakura_Foto.png';
+import fotoDavid from '../assets/David_Porto_Foto.png';
+import fotoHumberto from '../assets/Humberto_Mota_Foto.png';
+import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png';
+import fotoVagner from '../assets/Vagner_Montenegro_Foto.png';
 
 export default function Pessoas() {
   const { t } = useTranslation();
@@ -51,7 +56,52 @@ export default function Pessoas() {
     },
   ];
 
+  // ⚠️ PREENCHA OS NOVOS ALUNOS AQUI
   const alunos = [
+    { 
+      nome: "Aline May Takakura", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.mapeamento3D'),
+      lattes: "http://lattes.cnpq.br/2024420186542233", 
+      linkedin: "#", 
+      foto: fotoAline 
+    },
+    { 
+      nome: "David Magalhães Porto Oliveira", 
+      cargo: t('equipe.cargos.discGrad'), 
+      area: t('equipe.areas.bioinvasores'), 
+      lattes: "http://lattes.cnpq.br/7688696177210482",
+      linkedin: "https://www.linkedin.com/in/davidmpo/", 
+      foto: fotoDavid 
+    },
+    {
+      nome: "Humberto Mota de Lima",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.fusaoSensores'), 
+      lattes: "http://lattes.cnpq.br/1362022929143570", 
+      linkedin: "https://www.linkedin.com/in/humberto-mota-de-lima/", 
+      foto: fotoHumberto 
+    },
+    {
+      nome: "Rafael Varela Joachim Queimado",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.fusaoSensores'),
+      lattes: "http://lattes.cnpq.br/3872985475815307", 
+      linkedin: "#", 
+      foto: fotoRafaelAluno 
+    },
+    {
+      nome: "Vagner Montenegro de Melo",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.navegation'),
+      lattes: "http://lattes.cnpq.br/0259287634635424", 
+      linkedin: "https://www.linkedin.com/in/vagner-de-melo/", 
+      foto: fotoVagner 
+    },
+  ];
+
+  // Os alunos antigos foram movidos para cá
+  const alumni = [
     { 
       nome: "Eduardo M. Fontelles", 
       cargo: t('equipe.cargos.discGrad'), 
@@ -124,11 +174,19 @@ export default function Pessoas() {
         </div>
       </section>
 
-      {/* Seção Discentes */}
+      {/* Seção Discentes (Atuais) */}
       <section>
         <SectionTitle>{t('equipe.sections.alunos')}</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {alunos.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
+        </div>
+      </section>
+
+      {/* Seção Alumni (Egressos) */}
+      <section>
+        <SectionTitle>{t('equipe.sections.alumni')}</SectionTitle>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-90">
+          {alumni.map((p, i) => <CardDiretorio key={i} pessoa={p} />)}
         </div>
       </section>
 
