@@ -15,7 +15,7 @@ import fotoHumberto from '../assets/Humberto_Mota_Foto.png';
 import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png';
 import fotoVagner from '../assets/Vagner_Montenegro_Foto.png';
 
-export default function Pessoas() {
+export default function Equipe() {
   const { t } = useTranslation();
 
   const coordenacao = [

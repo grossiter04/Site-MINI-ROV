@@ -162,5 +162,9 @@ export const pt = {
     enderecoL1: "Rua Bione, Cais do Apolo, 220",
     enderecoL2: "Recife, PE",
     direitos: "Todos os direitos reservados."
+  },
+
+  notFound: {
+    desc: "Pagina não encontrada"
   }
 };

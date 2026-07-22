@@ -18,7 +18,7 @@ export default function Navbar() {
     { name: t('navbar.inicio'), path: '/' },
     { name: t('navbar.pesquisa'), path: '/pesquisa' },
     { name: t('navbar.eventos'), path: '/eventos' },
-    { name: t('navbar.equipe'), path: '/pessoas' },
+    { name: t('navbar.equipe'), path: '/equipe' },
     { name: t('navbar.publicacoes'), path: '/publicacoes' },
   ];
 

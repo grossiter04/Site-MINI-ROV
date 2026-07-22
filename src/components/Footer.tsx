@@ -27,7 +27,7 @@ export default function Footer() {
             <li><Link to="/" className="hover:text-orange-500 transition-colors">{t('footer.links.inicio')}</Link></li>
             <li><Link to="/pesquisa" className="hover:text-orange-500 transition-colors">{t('footer.links.pesquisa')}</Link></li>
             <li><Link to="/eventos" className="hover:text-orange-500 transition-colors">{t('footer.links.eventos')}</Link></li>
-            <li><Link to="/pessoas" className="hover:text-orange-500 transition-colors">{t('footer.links.equipe')}</Link></li>
+            <li><Link to="/equipe" className="hover:text-orange-500 transition-colors">{t('footer.links.equipe')}</Link></li>
             <li><Link to="/publicacoes" className="hover:text-orange-500 transition-colors">{t('footer.links.publicacoes')}</Link></li>
             <li><Link to="/contato" className="hover:text-orange-500 transition-colors">{t('footer.links.contato')}</Link></li>
           </ul>
