@@ -96,7 +96,7 @@ export const pt = {
     labels: {
       autores: "Autores",
       abstract: "Abstract",
-      btnPdf: "Acessar ao Documento (PDF)",
+      btnIeee: "Acesso ao Documento IEEE",
       btnDoi: "Referência DOI"
     }
   },

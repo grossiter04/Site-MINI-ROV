@@ -32,7 +32,15 @@ export default function Equipe() {
 
   const pesquisadores = [
     { 
-      nome: "Fernando F. de Carvalho", 
+      nome: "Benedito Alberto Macedo", 
+      cargo: t('equipe.cargos.invAssociado'), 
+      area: t('equipe.areas.gestorDev'), 
+      lattes: "http://lattes.cnpq.br/5699536418012791", 
+      linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
+      foto: fotoBeto  
+    },
+    { 
+      nome: "Diego Brandão", 
       cargo: t('equipe.cargos.invAssociado'), 
       area: t('equipe.areas.engSoftware'), 
       lattes: "http://lattes.cnpq.br/8491797408318076", 
@@ -40,12 +48,12 @@ export default function Equipe() {
       foto: fotoFernando 
     },
     { 
-      nome: "Benedito Alberto Macedo", 
+      nome: "Mineiro", 
       cargo: t('equipe.cargos.invAssociado'), 
-      area: t('equipe.areas.gestorDev'), 
-      lattes: "http://lattes.cnpq.br/5699536418012791", 
-      linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
-      foto: fotoBeto  
+      area: t('equipe.areas.engSoftware'), 
+      lattes: "http://lattes.cnpq.br/8491797408318076", 
+      linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/", 
+      foto: fotoFernando 
     },
     { 
       nome: "Marco A. de Oliveira Domingues", 
