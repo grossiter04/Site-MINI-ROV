@@ -8,41 +8,41 @@ export default function Publicacoes() {
     {
       id: 1,
       titulo: "Mapping and Localization in Confined Underwater Environments: A Review and Research Agenda",
-      autores: "Fontelles, E. M.; Muniz, F. R. S. S.; Melo, R. R. F.; Matubara, L.; Carvalho, F. F.; Costa, V. G. A.; Brandão, D. N.",
+      autores: "Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Lisa Matubara; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
-      linkPdf: "#",
-      linkDoi: "#",
+      linkIeee: "https://ieeexplore.ieee.org/document/11565705",
+      linkDoi: "https://doi.org/10.1109/CROS69211.2026.11565705",
       abstract: "Confined underwater environments such as ballast tanks, flooded tunnels, ship hulls, and underwater caves impose severe constraints on mapping and localization, including bounded geometry, turbidity, poor illumination, and strong acoustic multipath in the absence of satellite-based navigation. This paper presents a narrative review of mapping and localization methods for confined underwater spaces. Using a structured search on IEEE Xplore, complemented by snowballing and an operational definition of confinement, we identify twelve studies spanning acoustic, passive-optical, and active-optical sensing. Across these works, acoustic sensing consistently serves as the backbone for large-scale coverage under low visibility conditions. We propose a concise benchmarking and reporting agenda and highlight open research directions."
     },
     {
       id: 2,
       titulo: "Transformer Models for Underwater 3D Reconstruction: Advances, Challenges and Trends",
-      autores: "Costa, V. G. A.; Matubara, L.; Melo, R. R. F.; Fontelles, E. M.; Carvalho, F. F.; Muniz, F. R. S. S.; Brandão, D. N.",
+      autores: "Victor Guilherme A. Costa; Lisa Matubara; Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Rafael Rodiani F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
-      linkPdf: "#",
-      linkDoi: "#",
+      linkIeee: "https://ieeexplore.ieee.org/document/11565556",
+      linkDoi: "https://doi.org/10.1109/CROS69211.2026.11565556",
       abstract: "Underwater visual perception remains a significant challenge due to light absorption, scattering, turbidity, low texture, and non-uniform illumination. Recent advances in Transformer-based architectures have shown strong potential to overcome these limitations by capturing global dependencies and modeling complex optical degradation patterns. This systematic review, conducted according to PRISMA 2020 guidelines, examines studies published between 2019 and 2025. The findings indicate consistent improvements in robustness and accuracy across diverse underwater conditions. Hybrid models tend to achieve lower RMSE and higher structural consistency when compared with CNN-only baselines."
     },
     {
       id: 3,
       titulo: "Systematic Review on Sensor Fusion Techniques for Mobile Robots Using LiDAR and Complementary Sensors",
-      autores: "Fontelles, E. M.; Costa, V. G. A.; Muniz, F. R. S. S.; Melo, R. R. F.; Matubara, L.; Carvalho, F. F.; Brandão, D. N.",
+      autores: "Flávio Romero S. de Sá Muniz; Lisa Matubara; Eduardo M. Fontelles; Victor G. A. Costa; Rafael Rodiani F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
-      linkPdf: "#",
-      linkDoi: "#",
+      linkIeee: "https://ieeexplore.ieee.org/document/11565698",
+      linkDoi: "https://doi.org/10.1109/CROS69211.2026.11565698",
       abstract: "Reliable localization in underwater and harbor environments remains a significant challenge due to the unavailability of GPS and severe optical degradation caused by turbidity, light attenuation, and backscatter. In such conditions, no single sensing modality is sufficient, making multimodal fusion essential for robust navigation. This systematic review examines recent LiDAR-based fusion strategies published between 2020 and late 2025. The reviewed approaches are compared according to fusion architecture. Special emphasis is given to the use of blue-green (532 nm) LiDAR and its integration with sonar and cameras."
     },
     {
       id: 4,
       titulo: "Underwater Localization in Low-Texture Environments: Review, State of the Art and Perspectives",
-      autores: "Equipe de Investigação CESAR / CEFET-RJ",
+      autores: "Lisa Matubara; Flávio Romero S. de Sá Muniz; Eduardo M. Fontelles; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
-      linkPdf: "#",
-      linkDoi: "#",
+      linkIeee: "https://ieeexplore.ieee.org/document/11565736",
+      linkDoi: "https://doi.org/10.1109/CROS69211.2026.11565736",
       abstract: "Underwater localization in low-texture environments remains a major challenge in marine robotics due to turbidity, low visibility, and scarce visual features. This article presents a hybrid systematic-narrative review of 20 recent studies that address these limitations. The approaches fall into three main categories: (1) enhanced V-SLAM methods using geometric features and Deep Learning; (2) strongly or weakly coupled VIO/VI-SLAM systems; and (3) multisensor fusion strategies integrating optical, acoustic, and active sensors. The review reveals a clear trend toward architectures that decouple localization from mapping, enabling more resilient and long-term autonomous navigation."
     }
   ];
@@ -83,8 +83,8 @@ export default function Publicacoes() {
             </div>
 
             <div className="flex gap-6">
-              <a href={pub.linkPdf} className="text-sm font-bold text-slate-900 border-b-2 border-orange-500 hover:text-orange-600 transition-colors">
-                {t('publicacoes.labels.btnPdf')}
+              <a href={pub.linkIeee} className="text-sm font-bold text-slate-900 border-b-2 border-orange-500 hover:text-orange-600 transition-colors">
+                {t('publicacoes.labels.btnIeee')}
               </a>
               <a href={pub.linkDoi} className="text-sm font-bold text-slate-400 hover:text-slate-600 transition-colors italic">
                 {t('publicacoes.labels.btnDoi')}

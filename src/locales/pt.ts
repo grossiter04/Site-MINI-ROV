@@ -60,29 +60,32 @@ export const pt = {
   },
 
   equipe: {
-    title: "Corpo de pesquisadores",
-    desc: "Composição multidisciplinar focada na produção de conhecimento científico original e na formação avançada de recursos humanos para o setor de robótica autônoma.",
+    title: "Corpo de Pesquisadores",
+    desc: "Equipe multidisciplinar dedicada ao desenvolvimento de pesquisas em robótica autônoma, reunindo pesquisadores, profissionais e estudantes em diferentes linhas de investigação.",
     sections: {
       coordenacao: "Coordenação Científica",
-      pesquisadores: "Investigadores Associados",
-      alunos: "Discentes",
-      alumni: "Alumni (Pesquisadores Egressos)" 
+      pesquisadores: "Pesquisadores Associados",
+      alunos: "Estudantes Pesquisadores",
+      alumni: "Egressos"
     },
     cargos: {
-      invPrincipal: "Investigador Principal / Coordenador",
-      invAssociado: "Investigador Associado",
+      invDiretor: "Pesquisador Associado / Diretor do CESAR",
+      espRobotica: "Especialista em Robótica",
+      engSoftware: "Engenheiro de Software",
+      invPrincipal: "Pesquisador Principal / Coordenador",
+      invAssociado: "Pesquisador Associado",
       devSoftware: "Desenvolvedor de Software",
-      discGrad: "Discente (Graduação)",
-      discPos: "Discente (Pós-Graduação)"
+      discGrad: "Graduando Pesquisador",
+      discPos: "Pós-graduando Pesquisador",
+      egressoGrad: "Pesquisador Egresso"
     },
     areas: {
       engSoftware: "Engenharia de Software, IoT e Robótica",
-      gestorDev: "Gestor e desenvolvedor de Software",
+      gestorDev: "Gestão e Desenvolvimento de Software",
       visaoComp: "Visão Computacional e Robótica",
-      robotica: "Robótica",
-      sistEmbarcados: "Sistemas Embarcados",
-      devBackend: "Desenvolvedora Backend",
-      navegation: "Navegação",
+      espRobotica: "Sistemas Embarcados, Robótica e Eletrônica",
+      engSoftwares: "Modelagem Computacional e Aprendizado de Máquina",
+      GT: "Desenvolvimento de Soluções para Ground Truth",
       fusaoSensores: "Fusão de Sensores e Percepção Multimodal",
       mapeamento3D: "Mapeamento 3D e Reconstrução de Ambientes",
       bioinvasores: "Detecção de Bioinvasores Marinhos"
@@ -96,7 +99,7 @@ export const pt = {
     labels: {
       autores: "Autores",
       abstract: "Abstract",
-      btnPdf: "Acessar ao Documento (PDF)",
+      btnIeee: "Acesso ao Documento IEEE",
       btnDoi: "Referência DOI"
     }
   },
@@ -162,5 +165,9 @@ export const pt = {
     enderecoL1: "Rua Bione, Cais do Apolo, 220",
     enderecoL2: "Recife, PE",
     direitos: "Todos os direitos reservados."
+  },
+
+  notFound: {
+    desc: "Pagina não encontrada"
   }
 };

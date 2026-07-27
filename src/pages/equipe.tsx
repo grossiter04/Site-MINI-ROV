@@ -14,8 +14,11 @@ import fotoDavid from '../assets/David_Porto_Foto.png';
 import fotoHumberto from '../assets/Humberto_Mota_Foto.png';
 import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png';
 import fotoVagner from '../assets/Vagner_Montenegro_Foto.png';
+import fotoDiego from '../assets/Diego_Brandao_Foto.png';
+import fotoMineiro from '../assets/Mineiro_Foto.png';
+import fotoEduardo from '../assets/Eduardo_Foto.jpg'
 
-export default function Pessoas() {
+export default function Equipe() {
   const { t } = useTranslation();
 
   const coordenacao = [
@@ -28,24 +31,32 @@ export default function Pessoas() {
       linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
       foto: fotoFernando
     }, 
-  ];
-
-  const pesquisadores = [
-    { 
-      nome: "Fernando F. de Carvalho", 
-      cargo: t('equipe.cargos.invAssociado'), 
-      area: t('equipe.areas.engSoftware'), 
-      lattes: "http://lattes.cnpq.br/8491797408318076", 
-      linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/", 
-      foto: fotoFernando 
-    },
     { 
       nome: "Benedito Alberto Macedo", 
-      cargo: t('equipe.cargos.invAssociado'), 
+      cargo: t('equipe.cargos.invDiretor'), 
       area: t('equipe.areas.gestorDev'), 
       lattes: "http://lattes.cnpq.br/5699536418012791", 
       linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
       foto: fotoBeto  
+    },
+  ];
+
+  const pesquisadores = [
+    { 
+      nome: "Diego N. Brandão", 
+      cargo: t('equipe.cargos.engSoftware'), 
+      area: t('equipe.areas.engSoftwares'), 
+      lattes: "http://lattes.cnpq.br/5882024148867913", 
+      linkedin: "https://www.linkedin.com/in/diego-brand%C3%A3o-2263236/", 
+      foto: fotoDiego 
+    },
+    { 
+      nome: "Henrique B. Foresti", 
+      cargo: t('equipe.cargos.espRobotica'), 
+      area: t('equipe.areas.espRobotica'), 
+      lattes: "http://lattes.cnpq.br/5161255861654045", 
+      linkedin: "https://br.linkedin.com/in/hforesti", 
+      foto: fotoMineiro
     },
     { 
       nome: "Marco A. de Oliveira Domingues", 
@@ -87,13 +98,13 @@ export default function Pessoas() {
       cargo: t('equipe.cargos.discGrad'),
       area: t('equipe.areas.fusaoSensores'),
       lattes: "http://lattes.cnpq.br/3872985475815307", 
-      linkedin: "#", 
+      linkedin: "https://www.linkedin.com/in/rafael-varela-queimado-45255b3b5/", 
       foto: fotoRafaelAluno 
     },
     {
       nome: "Vagner Montenegro de Melo",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.navegation'),
+      area: t('equipe.areas.GT'),
       lattes: "http://lattes.cnpq.br/0259287634635424", 
       linkedin: "https://www.linkedin.com/in/vagner-de-melo/", 
       foto: fotoVagner 
@@ -104,40 +115,35 @@ export default function Pessoas() {
   const alumni = [
     { 
       nome: "Eduardo M. Fontelles", 
-      cargo: t('equipe.cargos.discGrad'), 
-      area: t('equipe.areas.robotica'), 
-      lattes: "#", 
-      linkedin: "#", 
-      foto: null 
+      cargo: t('equipe.cargos.egressoGrad'), 
+      lattes: "http://lattes.cnpq.br/0235056669405131", 
+      linkedin: "https://www.linkedin.com/in/eduardo-muniz-fontelles-920109224/", 
+      foto: fotoEduardo
     },
     { 
       nome: "Flávio Romero S. de S. Muniz", 
-      cargo: t('equipe.cargos.discGrad'), 
-      area: t('equipe.areas.sistEmbarcados'), 
+      cargo: t('equipe.cargos.egressoGrad'), 
       lattes: "http://lattes.cnpq.br/9189816041158285", 
       linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
       foto: fotoFlavio 
     },
     { 
       nome: "Lisa Matubara", 
-      cargo: t('equipe.cargos.discGrad'), 
-      area: t('equipe.areas.devBackend'), 
+      cargo: t('equipe.cargos.egressoGrad'), 
       lattes: "http://lattes.cnpq.br/0545406300374038", 
       linkedin: "https://www.linkedin.com/in/lisa-matubara/", 
       foto: fotoLisa 
     },
     { 
       nome: "Rafael Rodiani F. Melo", 
-      cargo: t('equipe.cargos.discPos'), 
-      area: t('equipe.areas.sistEmbarcados'), 
+      cargo: t('equipe.cargos.egressoGrad'), 
       lattes: "http://lattes.cnpq.br/0148847174850005", 
       linkedin: "#", 
       foto: fotoRafael 
     },
     { 
       nome: "Victor Guilherme A. Costa", 
-      cargo: t('equipe.cargos.discGrad'), 
-      area: t('equipe.areas.sistEmbarcados'), 
+      cargo: t('equipe.cargos.egressoGrad'), 
       lattes: "http://lattes.cnpq.br/0491365749315456", 
       linkedin: "#", 
       foto: fotoVictor 
