@@ -8,7 +8,7 @@ export default function Publicacoes() {
     {
       id: 1,
       titulo: "Mapping and Localization in Confined Underwater Environments: A Review and Research Agenda",
-      autores: "Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Lisa Matubara; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho",
+      autores: "Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Lisa Matubara; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
       linkIeee: "https://ieeexplore.ieee.org/document/11565705",
@@ -18,7 +18,7 @@ export default function Publicacoes() {
     {
       id: 2,
       titulo: "Transformer Models for Underwater 3D Reconstruction: Advances, Challenges and Trends",
-      autores: "Victor Guilherme A. Costa; Lisa Matubara; Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Rafael Rodiani F. Melo; Fernando F. de Carvalho",
+      autores: "Victor Guilherme A. Costa; Lisa Matubara; Eduardo M. Fontelles; Flávio Romero S. de Sá Muniz; Rafael Rodiani F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
       linkIeee: "https://ieeexplore.ieee.org/document/11565556",
@@ -28,7 +28,7 @@ export default function Publicacoes() {
     {
       id: 3,
       titulo: "Systematic Review on Sensor Fusion Techniques for Mobile Robots Using LiDAR and Complementary Sensors",
-      autores: "Flávio Romero S. de Sá Muniz; Lisa Matubara; Eduardo M. Fontelles; Victor G. A. Costa; Rafael Rodiani F. Melo; Fernando F. de Carvalho",
+      autores: "Flávio Romero S. de Sá Muniz; Lisa Matubara; Eduardo M. Fontelles; Victor G. A. Costa; Rafael Rodiani F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
       linkIeee: "https://ieeexplore.ieee.org/document/11565698",
@@ -38,7 +38,7 @@ export default function Publicacoes() {
     {
       id: 4,
       titulo: "Underwater Localization in Low-Texture Environments: Review, State of the Art and Perspectives",
-      autores: "Lisa Matubara; Flávio Romero S. de Sá Muniz; Eduardo M. Fontelles; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho",
+      autores: "Lisa Matubara; Flávio Romero S. de Sá Muniz; Eduardo M. Fontelles; Victor Guilherme A. Costa; Rafael R. F. Melo; Fernando F. de Carvalho; Diego N. Brandão",
       veiculo: t('publicacoes.veiculo'),
       ano: 2026,
       linkIeee: "https://ieeexplore.ieee.org/document/11565736",

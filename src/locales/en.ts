@@ -60,32 +60,35 @@ export const en = {
   },
 
   equipe: {
-    title: "Research Body",
-    desc: "A multidisciplinary team focused on the production of original scientific knowledge and the advanced training of human resources for the autonomous robotics sector.",
+    title: "Research Team",
+    desc: "A multidisciplinary team conducting research in autonomous robotics, bringing together researchers, professionals, and students across multiple research areas.",
     sections: {
       coordenacao: "Scientific Coordination",
       pesquisadores: "Associate Researchers",
-      alunos: "Students",
-      alumni: "Alumni (Former Members)" 
+      alunos: "Student Researchers",
+      alumni: "Alumni"
     },
     cargos: {
+      invDiretor: "Associate Researcher / CESAR Director",
+      espRobotica: "Robotics Specialist",
+      engSoftware: "Software Engineer",
       invPrincipal: "Principal Investigator / Coordinator",
       invAssociado: "Associate Researcher",
       devSoftware: "Software Developer",
-      discGrad: "Student (Undergraduate)",
-      discPos: "Student (Graduate)"
+      discGrad: "Undergraduate Research Student",
+      discPos: "Graduate Research Student",
+      egressoGrad: "Former Researcher"
     },
     areas: {
       engSoftware: "Software Engineering, IoT and Robotics",
-      gestorDev: "Software Manager and Developer",
+      gestorDev: "Management and Software Development",
       visaoComp: "Computer Vision and Robotics",
-      robotica: "Robotics",
-      sistEmbarcados: "Embedded Systems",
-      devBackend: "Backend Developer",
-      navegation: "Navigation",
+      espRobotica: "Embedded Systems, Robotics and Electronics",
+      engSoftwares: "Computational Modeling and Machine Learning",
+      GT: "Development of Underwater Ground Truth Solutions",
       fusaoSensores: "Sensor Fusion and Multimodal Perception",
       mapeamento3D: "3D Mapping and Environment Reconstruction",
-      bioinvasores: "Detection of Marine Bio-Invaders"
+      bioinvasores: "Marine Bioinvasive Species Detection"
     }
   },
 
