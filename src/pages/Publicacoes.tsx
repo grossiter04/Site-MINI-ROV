@@ -1,8 +1,8 @@
 import { FileText } from 'lucide-react';
-import { useTranslation } from 'react-i18next'; // Importamos o hook
+import { useTranslation } from 'react-i18next';
 
 export default function Publicacoes() {
-  const { t } = useTranslation(); // Inicializando a tradução
+  const { t } = useTranslation();
 
   const publicacoes = [
     {
@@ -66,7 +66,7 @@ export default function Publicacoes() {
               <span className="text-xs font-mono font-bold text-orange-600 bg-orange-50 px-2 py-1 uppercase tracking-widest">{pub.veiculo}</span>
               <span className="text-xs font-mono text-slate-400">{pub.ano}</span>
             </div>
-            
+
             <h2 className="text-xl font-bold text-slate-900 mb-4">{pub.titulo}</h2>
             <p className="text-sm text-slate-600 mb-6 font-medium">
               <strong>{t('publicacoes.labels.autores')}:</strong> {pub.autores}
@@ -93,6 +93,7 @@ export default function Publicacoes() {
           </article>
         ))}
       </section>
+
     </div>
   );
 }

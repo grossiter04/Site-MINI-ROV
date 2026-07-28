@@ -1,12 +1,38 @@
 import { Calendar, MapPin, Image as ImageIcon, FileText, ExternalLink } from 'lucide-react';
-import { useTranslation } from 'react-i18next'; // Importamos o hook de tradução
+import { useTranslation } from 'react-i18next';
 
-// Importação automatizada das imagens via Vite (aponta para src/assets/foto-cross)
-const imagensImportadas = import.meta.glob('../assets/foto-cross/*.{png,jpg,jpeg}', { eager: true, import: 'default' });
-const fotosCros2026 = Object.values(imagensImportadas) as string[];
+import _foto1 from '../assets/foto-cross/foto1.png?url';
+import _foto2 from '../assets/foto-cross/foto2.png?url';
+import _foto3 from '../assets/foto-cross/foto3.png?url';
+import _foto4 from '../assets/foto-cross/foto4.png?url';
+import _foto5 from '../assets/foto-cross/foto5.png?url';
+import _foto6 from '../assets/foto-cross/foto6.jpeg?url';
+import _foto7 from '../assets/foto-cross/foto7.jpeg?url';
+import _foto8 from '../assets/foto-cross/foto8.jpeg?url';
+import _foto9 from '../assets/foto-cross/foto9.jpeg?url';
+import _foto10 from '../assets/foto-cross/foto10.jpeg?url';
+const fotosCros2026 = [_foto1, _foto2, _foto3, _foto4, _foto5, _foto6, _foto7, _foto8, _foto9, _foto10];
 
-// Duplica a lista para garantir o efeito de carrossel em loop infinito
 const fotosCarrossel = [...fotosCros2026, ...fotosCros2026, ...fotosCros2026, ...fotosCros2026];
+
+const comunicacoesCientificas = [
+  { id: 1, titulo: "CROS 2026", ano: "2026", local: "João Pessoa, PB" }
+];
+
+const seminarios = [
+  { id: 1, titulo: "Seminário de Pesquisa: Percepção Visual Subaquática", evento: "CESAR BEAT", palestrante: "Fernando Carvalho" },
+];
+
+const animarCientificos = comunicacoesCientificas.length > 3;
+const animarSeminarios = seminarios.length > 3;
+
+const renderCientificos = animarCientificos
+  ? [...comunicacoesCientificas, ...comunicacoesCientificas, ...comunicacoesCientificas]
+  : comunicacoesCientificas;
+
+const renderSeminarios = animarSeminarios
+  ? [...seminarios, ...seminarios, ...seminarios]
+  : seminarios;
 
 const trabalhosApresentados = [
   {
@@ -30,13 +56,13 @@ const trabalhosApresentados = [
   {
     id: 4,
     titulo: "Underwater Localization in Low-Texture Environments: Review, State of the Art and Perspectives",
-    autores: "Equipa de Investigação CESAR / CEFET-RJ",
+    autores: "Matubara, L.; Muniz, F. R. S. S.; Fontelles, E. M.; Costa, V. G. A.; Melo, R. R. F.; Carvalho, F. F.; Brandão, D. N.",
     abstract: "Underwater localization in low-texture environments remains a major challenge in marine robotics due to turbidity, low visibility, and scarce visual features. This article presents a hybrid systematic-narrative review of 20 recent studies that address these limitations. The approaches fall into three main categories: (1) enhanced V-SLAM methods using geometric features and Deep Learning; (2) strongly or weakly coupled VIO/VI-SLAM systems; and (3) multisensor fusion strategies integrating optical, acoustic, and active sensors. The review reveals a clear trend toward architectures that decouple localization from mapping, enabling more resilient and long-term autonomous navigation."
   }
 ];
 
 export default function Eventos() {
-  const { t } = useTranslation(); // Inicializando a tradução
+  const { t } = useTranslation();
 
   return (
     <div className="space-y-16 py-12">
@@ -50,6 +76,7 @@ export default function Eventos() {
         </p>
       </header>
 
+      {/* Evento em Destaque + Galeria */}
       <section className="bg-slate-50 border border-slate-200 rounded-lg p-8 lg:p-12">
         <div className="flex flex-col lg:flex-row gap-8 justify-between items-start">
           <div className="space-y-4 max-w-2xl">
@@ -62,7 +89,7 @@ export default function Eventos() {
             <p className="text-lg text-slate-600 leading-relaxed text-justify">
               {t('eventos.destaqueDesc')}
             </p>
-            
+
             <div className="flex flex-wrap gap-4 pt-4">
               <div className="flex items-center gap-2 text-slate-700 text-sm font-medium bg-white px-4 py-2 rounded border border-slate-200">
                 <Calendar className="w-4 h-4 text-orange-500" />
@@ -72,9 +99,9 @@ export default function Eventos() {
                 <MapPin className="w-4 h-4 text-orange-500" />
                 <span>João Pessoa, PB</span>
               </div>
-              <a 
-                href="https://www.sbrobotica.org/cros2026/program" 
-                target="_blank" 
+              <a
+                href="https://www.sbrobotica.org/cros2026/program"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-white text-sm font-bold bg-slate-900 hover:bg-orange-600 px-6 py-2 rounded transition-colors"
               >
@@ -84,23 +111,22 @@ export default function Eventos() {
           </div>
         </div>
 
-        {/* Galeria em formato Carrossel Infinito */}
         <div className="mt-12 pt-12 border-t border-slate-200">
           <h3 className="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-2">
             <ImageIcon className="w-6 h-6 text-orange-500" />
             {t('eventos.registosTitle')}
           </h3>
-          
+
           <div className="relative flex overflow-hidden group pb-4">
             <div className="animate-scroll-left pause-on-hover flex gap-6 px-3">
               {fotosCarrossel.map((caminhoDaFoto, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex-shrink-0 w-80 md:w-[28rem] aspect-[4/3] rounded overflow-hidden border border-slate-200 hover:border-orange-400 hover:shadow-lg transition-all"
                 >
-                  <img 
-                    src={caminhoDaFoto} 
-                    alt={t('eventos.registosTitle')} 
+                  <img
+                    src={caminhoDaFoto}
+                    alt={t('eventos.registosTitle')}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
@@ -110,9 +136,53 @@ export default function Eventos() {
         </div>
       </section>
 
-      <section>
+      {/* Comunicações em Congressos */}
+      <section className="overflow-hidden border-t border-slate-200 pt-12">
+        <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2">
+          {t('home.comunicacoesTitle')}
+        </h2>
+        <p className="text-sm text-slate-600 mb-10">
+          {t('home.comunicacoesDesc')}
+        </p>
+
+        <div className="mb-10">
+          <h3 className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">
+            {t('home.anaisTitle')}
+          </h3>
+          <div className={`relative flex overflow-hidden group ${!animarCientificos ? 'justify-start w-full' : ''}`}>
+            <div className={`${animarCientificos ? 'animate-scroll-right pause-on-hover' : 'flex-wrap'} flex gap-4 px-1`}>
+              {renderCientificos.map((item, index) => (
+                <div key={`cientifico-${index}`} className="flex-shrink-0 w-72 bg-slate-50 border border-slate-200 rounded-lg p-5">
+                  <p className="text-xs text-slate-500 font-mono mb-2">{item.ano} • {item.local}</p>
+                  <h4 className="text-base font-bold text-slate-900 leading-tight">{item.titulo}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-wider">
+            {t('home.seminariosTitle')}
+          </h3>
+          <div className={`relative flex overflow-hidden group ${!animarSeminarios ? 'justify-start w-full' : ''}`}>
+            <div className={`${animarSeminarios ? 'animate-scroll-left pause-on-hover' : 'flex-wrap'} flex gap-4 px-1`}>
+              {renderSeminarios.map((item, index) => (
+                <div key={`seminario-${index}`} className="flex-shrink-0 w-72 bg-white border border-slate-200 rounded-lg p-5">
+                  <p className="text-xs text-slate-500 font-mono mb-2">{item.palestrante}</p>
+                  <h4 className="text-base font-bold text-slate-900 leading-tight mb-1">{item.titulo}</h4>
+                  <p className="text-xs text-slate-400">{item.evento}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trabalhos Apresentados */}
+      <section className="border-t border-slate-200 pt-12">
         <h2 className="text-2xl font-bold text-slate-900 mb-8 tracking-tight flex items-center gap-3">
-          <span className="w-6 h-1 bg-orange-500"></span>
+          <span className="w-6 h-1 bg-orange-500 inline-block"></span>
           {t('eventos.submissoesTitle')}
         </h2>
 
@@ -125,7 +195,7 @@ export default function Eventos() {
               <p className="text-sm text-slate-500 mb-6 italic">
                 {trabalho.autores}
               </p>
-              
+
               <div className="bg-slate-50 border-l-4 border-slate-300 p-6">
                 <div className="flex items-center gap-2 mb-3 text-slate-700 font-bold uppercase text-xs tracking-wider">
                   <FileText className="w-4 h-4" />

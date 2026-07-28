@@ -1,22 +1,21 @@
-import { FileText, Mail } from 'lucide-react'; 
+import { FileText, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-// Imports estáticos corretos para o Vite
-import fotoFernando from '../assets/Fernando_Carvalho_Foto.png';
-import fotoFlavio from '../assets/Flavio_Muniz_Foto.png';
-import fotoLisa from '../assets/Lisa_Matubara_Foto.png';
-import fotoRafael from '../assets/Rafael_Melo_Foto.png';
-import fotoVictor from '../assets/Victor_Costa_Foto.png';
-import fotoBeto from '../assets/Beto_Macedo_Foto.png';
-import fotoMarco from '../assets/Marco_Antonio_Foto.png';
-import fotoAline from '../assets/Aline_Takakura_Foto.png';
-import fotoDavid from '../assets/David_Porto_Foto.png';
-import fotoHumberto from '../assets/Humberto_Mota_Foto.png';
-import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png';
-import fotoVagner from '../assets/Vagner_Montenegro_Foto.png';
-import fotoDiego from '../assets/Diego_Brandao_Foto.png';
-import fotoMineiro from '../assets/Mineiro_Foto.png';
-import fotoEduardo from '../assets/Eduardo_Foto.jpg'
+import fotoFernando from '../assets/Fernando_Carvalho_Foto.png?url';
+import fotoFlavio from '../assets/Flavio_Muniz_Foto.png?url';
+import fotoLisa from '../assets/Lisa_Matubara_Foto.png?url';
+import fotoRafael from '../assets/Rafael_Melo_Foto.png?url';
+import fotoVictor from '../assets/Victor_Costa_Foto.png?url';
+import fotoBeto from '../assets/Beto_Macedo_Foto.png?url';
+import fotoMarco from '../assets/Marco_Antonio_Foto.png?url';
+import fotoAline from '../assets/Aline_Takakura_Foto.png?url';
+import fotoDavid from '../assets/David_Porto_Foto.png?url';
+import fotoHumberto from '../assets/Humberto_Mota_Foto.png?url';
+import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png?url';
+import fotoVagner from '../assets/Vagner_Montenegro_Foto.png?url';
+import fotoDiego from '../assets/Diego_Brandao_Foto.png?url';
+import fotoMineiro from '../assets/Mineiro_Foto.png?url';
+import fotoEduardo from '../assets/Eduardo_Foto.jpg?url';
 
 export default function Equipe() {
   const { t } = useTranslation();
@@ -30,129 +29,127 @@ export default function Equipe() {
       lattes: "http://lattes.cnpq.br/8491797408318076",
       linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
       foto: fotoFernando
-    }, 
-    { 
-      nome: "Benedito Alberto Macedo", 
-      cargo: t('equipe.cargos.invDiretor'), 
-      area: t('equipe.areas.gestorDev'), 
-      lattes: "http://lattes.cnpq.br/5699536418012791", 
-      linkedin: "https://www.linkedin.com/in/beneditomacedo/", 
-      foto: fotoBeto  
+    },
+    {
+      nome: "Benedito Alberto Macedo",
+      cargo: t('equipe.cargos.invDiretor'),
+      area: t('equipe.areas.gestorDev'),
+      lattes: "http://lattes.cnpq.br/5699536418012791",
+      linkedin: "https://www.linkedin.com/in/beneditomacedo/",
+      foto: fotoBeto
     },
   ];
 
   const pesquisadores = [
-    { 
-      nome: "Diego N. Brandão", 
-      cargo: t('equipe.cargos.engSoftware'), 
-      area: t('equipe.areas.engSoftwares'), 
-      lattes: "http://lattes.cnpq.br/5882024148867913", 
-      linkedin: "https://www.linkedin.com/in/diego-brand%C3%A3o-2263236/", 
-      foto: fotoDiego 
+    {
+      nome: "Diego N. Brandão",
+      cargo: t('equipe.cargos.engSoftware'),
+      area: t('equipe.areas.engSoftwares'),
+      lattes: "http://lattes.cnpq.br/5882024148867913",
+      linkedin: "https://www.linkedin.com/in/diego-brand%C3%A3o-2263236/",
+      foto: fotoDiego
     },
-    { 
-      nome: "Henrique B. Foresti", 
-      cargo: t('equipe.cargos.espRobotica'), 
-      area: t('equipe.areas.espRobotica'), 
-      lattes: "http://lattes.cnpq.br/5161255861654045", 
-      linkedin: "https://br.linkedin.com/in/hforesti", 
+    {
+      nome: "Henrique B. Foresti",
+      cargo: t('equipe.cargos.espRobotica'),
+      area: t('equipe.areas.espRobotica'),
+      lattes: "http://lattes.cnpq.br/5161255861654045",
+      linkedin: "https://br.linkedin.com/in/hforesti",
       foto: fotoMineiro
     },
-    { 
-      nome: "Marco A. de Oliveira Domingues", 
-      cargo: t('equipe.cargos.devSoftware'), 
-      area: t('equipe.areas.visaoComp'), 
-      lattes: "http://lattes.cnpq.br/7139685024425123", 
-      foto: fotoMarco  
+    {
+      nome: "Marco A. de Oliveira Domingues",
+      cargo: t('equipe.cargos.devSoftware'),
+      area: t('equipe.areas.visaoComp'),
+      lattes: "http://lattes.cnpq.br/7139685024425123",
+      foto: fotoMarco
     },
   ];
 
-  // ⚠️ PREENCHA OS NOVOS ALUNOS AQUI
   const alunos = [
-    { 
-      nome: "Aline May Takakura", 
-      cargo: t('equipe.cargos.discGrad'), 
+    {
+      nome: "Aline May Takakura",
+      cargo: t('equipe.cargos.discGrad'),
       area: t('equipe.areas.mapeamento3D'),
-      lattes: "http://lattes.cnpq.br/2024420186542233", 
-      linkedin: "#", 
-      foto: fotoAline 
+      lattes: "http://lattes.cnpq.br/2024420186542233",
+      linkedin: "#",
+      foto: fotoAline
     },
-    { 
-      nome: "David Magalhães Porto Oliveira", 
-      cargo: t('equipe.cargos.discGrad'), 
-      area: t('equipe.areas.bioinvasores'), 
+    {
+      nome: "David Magalhães Porto Oliveira",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.bioinvasores'),
       lattes: "http://lattes.cnpq.br/7688696177210482",
-      linkedin: "https://www.linkedin.com/in/davidmpo/", 
-      foto: fotoDavid 
+      linkedin: "https://www.linkedin.com/in/davidmpo/",
+      foto: fotoDavid
     },
     {
       nome: "Humberto Mota de Lima",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.fusaoSensores'), 
-      lattes: "http://lattes.cnpq.br/1362022929143570", 
-      linkedin: "https://www.linkedin.com/in/humberto-mota-de-lima/", 
-      foto: fotoHumberto 
+      area: t('equipe.areas.fusaoSensores'),
+      lattes: "http://lattes.cnpq.br/1362022929143570",
+      linkedin: "https://www.linkedin.com/in/humberto-mota-de-lima/",
+      foto: fotoHumberto
     },
     {
       nome: "Rafael Varela Joachim Queimado",
       cargo: t('equipe.cargos.discGrad'),
       area: t('equipe.areas.fusaoSensores'),
-      lattes: "http://lattes.cnpq.br/3872985475815307", 
-      linkedin: "https://www.linkedin.com/in/rafael-varela-queimado-45255b3b5/", 
-      foto: fotoRafaelAluno 
+      lattes: "http://lattes.cnpq.br/3872985475815307",
+      linkedin: "https://www.linkedin.com/in/rafael-varela-queimado-45255b3b5/",
+      foto: fotoRafaelAluno
     },
     {
       nome: "Vagner Montenegro de Melo",
       cargo: t('equipe.cargos.discGrad'),
       area: t('equipe.areas.GT'),
-      lattes: "http://lattes.cnpq.br/0259287634635424", 
-      linkedin: "https://www.linkedin.com/in/vagner-de-melo/", 
-      foto: fotoVagner 
+      lattes: "http://lattes.cnpq.br/0259287634635424",
+      linkedin: "https://www.linkedin.com/in/vagner-de-melo/",
+      foto: fotoVagner
     },
   ];
 
-  // Os alunos antigos foram movidos para cá
   const alumni = [
-    { 
-      nome: "Eduardo M. Fontelles", 
-      cargo: t('equipe.cargos.egressoGrad'), 
-      lattes: "http://lattes.cnpq.br/0235056669405131", 
-      linkedin: "https://www.linkedin.com/in/eduardo-muniz-fontelles-920109224/", 
+    {
+      nome: "Eduardo M. Fontelles",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/0235056669405131",
+      linkedin: "https://www.linkedin.com/in/eduardo-muniz-fontelles-920109224/",
       foto: fotoEduardo
     },
-    { 
-      nome: "Flávio Romero S. de S. Muniz", 
-      cargo: t('equipe.cargos.egressoGrad'), 
-      lattes: "http://lattes.cnpq.br/9189816041158285", 
-      linkedin: "https://www.linkedin.com/in/flavio-muniz/", 
-      foto: fotoFlavio 
+    {
+      nome: "Flávio Romero S. de S. Muniz",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/9189816041158285",
+      linkedin: "https://www.linkedin.com/in/flavio-muniz/",
+      foto: fotoFlavio
     },
-    { 
-      nome: "Lisa Matubara", 
-      cargo: t('equipe.cargos.egressoGrad'), 
-      lattes: "http://lattes.cnpq.br/0545406300374038", 
-      linkedin: "https://www.linkedin.com/in/lisa-matubara/", 
-      foto: fotoLisa 
+    {
+      nome: "Lisa Matubara",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/0545406300374038",
+      linkedin: "https://www.linkedin.com/in/lisa-matubara/",
+      foto: fotoLisa
     },
-    { 
-      nome: "Rafael Rodiani F. Melo", 
-      cargo: t('equipe.cargos.egressoGrad'), 
-      lattes: "http://lattes.cnpq.br/0148847174850005", 
-      linkedin: "#", 
-      foto: fotoRafael 
+    {
+      nome: "Rafael Rodiani F. Melo",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/0148847174850005",
+      linkedin: "#",
+      foto: fotoRafael
     },
-    { 
-      nome: "Victor Guilherme A. Costa", 
-      cargo: t('equipe.cargos.egressoGrad'), 
-      lattes: "http://lattes.cnpq.br/0491365749315456", 
-      linkedin: "#", 
-      foto: fotoVictor 
+    {
+      nome: "Victor Guilherme A. Costa",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/0491365749315456",
+      linkedin: "#",
+      foto: fotoVictor
     },
   ];
 
   return (
     <div className="space-y-16 py-12">
-      
+
       {/* Cabeçalho da Página */}
       <header className="border-b border-slate-200 pb-8">
         <div className="w-16 h-1 bg-orange-500 mb-4"></div>
@@ -225,7 +222,7 @@ function FormalPlaceholder() {
 function CardDiretorio({ pessoa, destaque = false }: { pessoa: any, destaque?: boolean }) {
   return (
     <div className={`bg-white border border-slate-200 rounded-lg p-6 flex items-start gap-5 shadow-sm hover:border-slate-300 transition-colors ${destaque ? 'md:col-span-1' : ''}`}>
-      
+
       {/* Imagem Formato 3x4 Acadêmico */}
       <div className={`flex-shrink-0 ${destaque ? 'w-24 h-32' : 'w-20 h-24'} rounded overflow-hidden`}>
         {pessoa.foto ? (
@@ -246,7 +243,7 @@ function CardDiretorio({ pessoa, destaque = false }: { pessoa: any, destaque?: b
         <p className="text-sm text-slate-600 mb-4 line-clamp-2">
           {pessoa.area}
         </p>
-        
+
         {/* Links Acadêmicos */}
         <div className="flex flex-wrap gap-4 mt-auto">
           {pessoa.email && (
@@ -270,10 +267,10 @@ interface IconLinkProps { href: string; icon: React.ElementType; label: string; 
 
 function IconLink({ href, icon: Icon, label }: IconLinkProps) {
   return (
-    <a 
-      href={href} 
-      target="_blank" 
-      rel="noopener noreferrer" 
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex items-center gap-1.5 text-slate-400 hover:text-orange-600 transition-colors"
       title={label}
     >
@@ -286,14 +283,14 @@ function IconLink({ href, icon: Icon, label }: IconLinkProps) {
 // Ícone Customizado para LinkedIn (MANTIDO ORIGINAL)
 function LinkedinIcon({ className }: { className?: string }) {
   return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className={className}
     >
       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
