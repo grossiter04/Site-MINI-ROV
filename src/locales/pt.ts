@@ -72,6 +72,7 @@ export const pt = {
       invDiretor: "Pesquisador Associado / Diretor do CESAR",
       espRobotica: "Especialista em Robótica",
       engSoftware: "Engenheiro de Software",
+      engMeca: "Engenheiro Mecatrônico",
       invPrincipal: "Pesquisador Principal / Coordenador",
       invAssociado: "Pesquisador Associado",
       devSoftware: "Desenvolvedor de Software",
@@ -80,6 +81,7 @@ export const pt = {
       egressoGrad: "Pesquisador Egresso"
     },
     areas: {
+      engMeca: "Mecânica, Eletrônica e Computação",
       engSoftware: "Engenharia de Software, IoT e Robótica",
       gestorDev: "Gestão e Desenvolvimento de Software",
       visaoComp: "Visão Computacional e Robótica",

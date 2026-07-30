@@ -69,6 +69,7 @@ export const en = {
       alumni: "Alumni"
     },
     cargos: {
+      engMeca: "Mechatronics Engineer",
       invDiretor: "Associate Researcher / CESAR Director",
       espRobotica: "Robotics Specialist",
       engSoftware: "Software Engineer",
@@ -80,6 +81,7 @@ export const en = {
       egressoGrad: "Former Researcher"
     },
     areas: {
+      engMeca: "Mechanical, Eletronics and Computer Engineering",
       engSoftware: "Software Engineering, IoT and Robotics",
       gestorDev: "Management and Software Development",
       visaoComp: "Computer Vision and Robotics",

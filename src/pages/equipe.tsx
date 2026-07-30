@@ -16,6 +16,7 @@ import fotoVagner from '../assets/Vagner_Montenegro_Foto.png?url';
 import fotoDiego from '../assets/Diego_Brandao_Foto.png?url';
 import fotoMineiro from '../assets/Mineiro_Foto.png?url';
 import fotoEduardo from '../assets/Eduardo_Foto.jpg?url';
+import fotoTouca from '../assets/Touca_Foto.jpeg?url';
 
 export default function Equipe() {
   const { t } = useTranslation();
@@ -62,8 +63,17 @@ export default function Equipe() {
       cargo: t('equipe.cargos.devSoftware'),
       area: t('equipe.areas.visaoComp'),
       lattes: "http://lattes.cnpq.br/7139685024425123",
+      linkedin: "#",
       foto: fotoMarco
     },
+    {
+      nome: "José Carlos Barbosa Pereira Filho",
+      cargo: t('equipe.cargos.engMeca'),
+      area: t('equipe.areas.engMeca'),
+      lattes: "http://lattes.cnpq.br/0273490342823896",
+      linkedin: "#",
+      foto: fotoTouca
+    }
   ];
 
   const alunos = [
