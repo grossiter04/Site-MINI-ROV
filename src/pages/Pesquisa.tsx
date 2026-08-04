@@ -1,4 +1,4 @@
-import { Cpu, Globe, Database, BookText, Eye } from 'lucide-react';
+import { Cpu, Globe, Database, Eye, BookText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; // Importamos o hook
 
