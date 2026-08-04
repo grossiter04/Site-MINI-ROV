@@ -24,10 +24,10 @@ export default function Home() {
   const { t } = useTranslation(); // Inicializando o hook de tradução
 
   return (
-    <div className="space-y-24 pb-12">
+    <div className="space-y-12 pb-12">
 
       {/* 1. Hero Section */}
-      <section className="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+      <section className="relative pt-20 pb-24 lg:pt-10 lg:pb-1 overflow-hidden">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-slate-100/50 blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-slate-50/50 blur-3xl -z-10"></div>
 
