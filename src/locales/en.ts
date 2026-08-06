@@ -122,6 +122,7 @@ export const en = {
       nota: "* Meetings take place at CESAR facilities with the possibility of hybrid/remote attendance. Use the form below to request the access link."
     },
     canais: {
+      emailDesc: "Coordinator Fernando Carvalho Email Address",
       title: "Official Channels and Records",
       cnpqTitle: "DGP / CNPq Directory",
       cnpqDesc: "Consult the official mirror of our research group at the National Council for Scientific and Technological Development.",

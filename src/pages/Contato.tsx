@@ -16,7 +16,7 @@ export default function Contato() {
 
     try {
       // Substitua pela sua URL real do Formspree
-      const response = await fetch('https://formspree.io/f/xkoegale', {
+      const response = await fetch('https://formspree.io/f/xzepbkzq', {
         method: 'POST',
         body: formData,
         headers: {

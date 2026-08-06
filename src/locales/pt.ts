@@ -122,6 +122,7 @@ export const pt = {
       nota: "* As reuniões ocorrem nas instalações da CESAR com possibilidade de acompanhamento híbrido/remoto. Utilize o formulário abaixo para solicitar o link de acesso."
     },
     canais: {
+      emailDesc: "Endereço Email do Coordenador Fernando Carvalho",
       title: "Canais e Registos Oficiais",
       cnpqTitle: "Diretório DGP / CNPq",
       cnpqDesc: "Consulte o espelho oficial do nosso grupo de pesquisa no Conselho Nacional de Desenvolvimento Científico e Tecnológico.",
