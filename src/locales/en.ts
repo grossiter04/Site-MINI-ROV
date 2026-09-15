@@ -69,6 +69,7 @@ export const en = {
       alumni: "Alumni"
     },
     cargos: {
+      radiologia: "Physicist radiologist",
       engMeca: "Mechatronics Engineer",
       invDiretor: "Associate Researcher / CESAR Director",
       espRobotica: "Robotics Specialist",
@@ -81,6 +82,7 @@ export const en = {
       egressoGrad: "Former Researcher"
     },
     areas: {
+      radiologia: "Physicist, Radiologic Technologist, Researcher",
       engMeca: "Mechanical, Eletronics and Computer Engineering",
       engSoftware: "Software Engineering, IoT and Robotics",
       gestorDev: "Management and Software Development",

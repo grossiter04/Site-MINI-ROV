@@ -69,6 +69,7 @@ export const pt = {
       alumni: "Egressos"
     },
     cargos: {
+      radiologia: "Fisico Radiologista",
       invDiretor: "Pesquisador Associado / Diretor do CESAR",
       espRobotica: "Especialista em Robótica",
       engSoftware: "Engenheiro de Software",
@@ -81,6 +82,7 @@ export const pt = {
       egressoGrad: "Pesquisador Egresso"
     },
     areas: {
+      radiologia: "Físico, Tecnólogo em Radiologia, Pesquisador",
       engMeca: "Mecânica, Eletrônica e Computação",
       engSoftware: "Engenharia de Software, IoT e Robótica",
       gestorDev: "Gestão e Desenvolvimento de Software",

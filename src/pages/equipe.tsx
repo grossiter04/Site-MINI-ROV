@@ -11,12 +11,14 @@ import fotoMarco from '../assets/Marco_Antonio_Foto.png?url';
 import fotoAline from '../assets/Aline_Takakura_Foto.png?url';
 import fotoDavid from '../assets/David_Porto_Foto.png?url';
 import fotoHumberto from '../assets/Humberto_Mota_Foto.png?url';
-import fotoRafaelAluno from '../assets/Rafael_Varela_Foto.png?url';
+import fotoRafaelVQ from '../assets/Rafael_Varela_Foto.png?url';
 import fotoVagner from '../assets/Vagner_Montenegro_Foto.png?url';
 import fotoDiego from '../assets/Diego_Brandao_Foto.png?url';
 import fotoMineiro from '../assets/Mineiro_Foto.png?url';
 import fotoEduardo from '../assets/Eduardo_Foto.jpg?url';
 import fotoTouca from '../assets/Touca_Foto.jpeg?url';
+import fotoJP from '../assets/Joao_Pedro_Foto.jpg?url';
+import fotoAlex from '../assets/Alex_Foto.jpeg?url';
 
 export default function Equipe() {
   const { t } = useTranslation();
@@ -73,6 +75,14 @@ export default function Equipe() {
       lattes: "http://lattes.cnpq.br/0273490342823896",
       linkedin: "#",
       foto: fotoTouca
+    },
+    {
+      nome: "Alex Cristóvão Holanda de Oliveira",
+      cargo: t('equipe.cargos.radiologia'),
+      area: t('equipe.areas.radiologia'),
+      lattes: "http://lattes.cnpq.br/5018122822281130",
+      linkedin: "https://www.linkedin.com/in/alex-holanda-de-oliveira",
+      foto: fotoAlex
     }
   ];
 
@@ -107,19 +117,26 @@ export default function Equipe() {
       area: t('equipe.areas.fusaoSensores'),
       lattes: "http://lattes.cnpq.br/3872985475815307",
       linkedin: "https://www.linkedin.com/in/rafael-varela-queimado-45255b3b5/",
-      foto: fotoRafaelAluno
+      foto: fotoRafaelVQ
     },
     {
-      nome: "Vagner Montenegro de Melo",
+      nome: "João Pedro dos Santos Menezes",
       cargo: t('equipe.cargos.discGrad'),
       area: t('equipe.areas.GT'),
-      lattes: "http://lattes.cnpq.br/0259287634635424",
-      linkedin: "https://www.linkedin.com/in/vagner-de-melo/",
-      foto: fotoVagner
+      lattes: "http://lattes.cnpq.br/2298762985819875",
+      linkedin: "https://www.linkedin.com/in/joaopedrosmenezes/",
+      foto: fotoJP
     },
   ];
 
   const alumni = [
+    {
+      nome: "Vagner Montenegro de Melo",
+      cargo: t('equipe.cargos.egressoGrad'),
+      lattes: "http://lattes.cnpq.br/0259287634635424",
+      linkedin: "https://www.linkedin.com/in/vagner-de-melo/",
+      foto: fotoVagner
+    },
     {
       nome: "Eduardo M. Fontelles",
       cargo: t('equipe.cargos.egressoGrad'),
