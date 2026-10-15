@@ -89,10 +89,12 @@ export const pt = {
       visaoComp: "Visão Computacional e Robótica",
       espRobotica: "Sistemas Embarcados, Robótica e Eletrônica",
       engSoftwares: "Modelagem Computacional e Aprendizado de Máquina",
-      GT: "Desenvolvimento de Soluções para Ground Truth",
-      fusaoSensores: "Fusão de Sensores e Percepção Multimodal",
-      mapeamento3D: "Mapeamento 3D e Reconstrução de Ambientes",
-      bioinvasores: "Detecção de Bioinvasores Marinhos"
+      GT: "",
+      fusaoSensores: "",
+      mapeamento3D: "",
+      bioinvasores: "",
+      denys: "",
+      frederico: ""
     }
   },
 
