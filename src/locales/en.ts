@@ -89,10 +89,12 @@ export const en = {
       visaoComp: "Computer Vision and Robotics",
       espRobotica: "Embedded Systems, Robotics and Electronics",
       engSoftwares: "Computational Modeling and Machine Learning",
-      GT: "Development of Underwater Ground Truth Solutions",
-      fusaoSensores: "Sensor Fusion and Multimodal Perception",
-      mapeamento3D: "3D Mapping and Environment Reconstruction",
-      bioinvasores: "Marine Bioinvasive Species Detection"
+      GT: "",
+      fusaoSensores: "",
+      mapeamento3D: "",
+      bioinvasores: "",
+      denys: "",
+      frederico: ""
     }
   },
 

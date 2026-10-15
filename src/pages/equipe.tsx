@@ -19,6 +19,8 @@ import fotoEduardo from '../assets/Eduardo_Foto.jpg?url';
 import fotoTouca from '../assets/Touca_Foto.jpeg?url';
 import fotoJP from '../assets/Joao_Pedro_Foto.jpg?url';
 import fotoAlex from '../assets/Alex_Foto.jpeg?url';
+import fotoDenys from '../assets/Denys_Foto.jpeg?url';
+import fotoFrederico from '../assets/Frederico_Foto.jpeg?url'
 
 export default function Equipe() {
   const { t } = useTranslation();
@@ -126,6 +128,22 @@ export default function Equipe() {
       lattes: "http://lattes.cnpq.br/2298762985819875",
       linkedin: "https://www.linkedin.com/in/joaopedrosmenezes/",
       foto: fotoJP
+    },
+    {
+      nome: "Denys Leonardo Oliveira de Sales",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.denys'),
+      lattes: "http://lattes.cnpq.br/7549812058342444",
+      linkedin: "https://www.linkedin.com/in/denys-sales",
+      foto: fotoDenys
+    },
+    {
+      nome: "Frederico da Costa Rabello Neto",
+      cargo: t('equipe.cargos.discGrad'),
+      area: t('equipe.areas.frederico'),
+      lattes: "#",
+      linkedin: "https://www.linkedin.com/in/fredericorabello",
+      foto: fotoFrederico
     },
   ];
 
