@@ -69,32 +69,23 @@ export const en = {
       alumni: "Alumni"
     },
     cargos: {
-      radiologia: "Physicist radiologist",
-      engMeca: "Mechatronics Engineer",
       invDiretor: "Associate Researcher / CESAR Director",
-      espRobotica: "Robotics Specialist",
-      engSoftware: "Software Engineer",
       invPrincipal: "Principal Investigator / Coordinator",
       invAssociado: "Associate Researcher",
-      devSoftware: "Software Developer",
       discGrad: "Undergraduate Research Student",
       discPos: "Graduate Research Student",
       egressoGrad: "Former Researcher"
     },
     areas: {
-      radiologia: "Physicist, Radiologic Technologist, Researcher",
-      engMeca: "Mechanical, Eletronics and Computer Engineering",
-      engSoftware: "Software Engineering, IoT and Robotics",
-      gestorDev: "Management and Software Development",
-      visaoComp: "Computer Vision and Robotics",
-      espRobotica: "Embedded Systems, Robotics and Electronics",
-      engSoftwares: "Computational Modeling and Machine Learning",
-      GT: "",
-      fusaoSensores: "",
-      mapeamento3D: "",
-      bioinvasores: "",
-      denys: "",
-      frederico: ""
+      alex: "Physics, Master's and Ph.D. in Technology",
+      beto: "Software Management and Development",
+      diego: "Computational Modeling and Machine Learning",
+      fernando: "Software Engineering, IoT, and Robotics",
+      marco: "Computer Vision and Robotics",
+      mineiro: "Embedded Systems, Robotics, and Electronics",
+      touca: "Mechanical Engineering, Electronics, and Computing",
+      ygor: "Machine Learning and Mobile Robotics",
+      empty: ""
     }
   },
 

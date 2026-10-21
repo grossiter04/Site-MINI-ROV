@@ -36,10 +36,12 @@ export default function Home() {
           <div className="lg:col-span-7">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-sm font-semibold mb-6">
               <BookOpen className="w-4 h-4 text-orange-600" />
-              {t('home.heroBadge')}
+              <a href='http://dgp.cnpq.br/dgp/espelhogrupo/819844' className='hover:text-orange-500 transition-colors'>
+                {t('home.heroBadge')}
+              </a>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-8">
               {t('home.heroTitle1')} <br className="hidden md:block" />
             </h1>
 

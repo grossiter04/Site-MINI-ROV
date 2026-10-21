@@ -19,6 +19,7 @@ import fotoEduardo from '../assets/Eduardo_Foto.jpg?url';
 import fotoTouca from '../assets/Touca_Foto.jpeg?url';
 import fotoJP from '../assets/Joao_Pedro_Foto.jpg?url';
 import fotoAlex from '../assets/Alex_Foto.jpeg?url';
+import fotoYgor from '../assets/Ygor_Foto.jpg?url';
 import fotoDenys from '../assets/Denys_Foto.jpeg?url';
 import fotoFrederico from '../assets/Frederico_Foto.jpeg?url'
 
@@ -29,7 +30,7 @@ export default function Equipe() {
     {
       nome: "Fernando F. de Carvalho",
       cargo: t('equipe.cargos.invPrincipal'),
-      area: t('equipe.areas.engSoftware'),
+      area: t('equipe.areas.fernando'),
       email: "ffc@cesar.school",
       lattes: "http://lattes.cnpq.br/8491797408318076",
       linkedin: "https://www.linkedin.com/in/fernando-ferreira-carvalho-05890526/",
@@ -38,7 +39,7 @@ export default function Equipe() {
     {
       nome: "Benedito Alberto Macedo",
       cargo: t('equipe.cargos.invDiretor'),
-      area: t('equipe.areas.gestorDev'),
+      area: t('equipe.areas.beto'),
       lattes: "http://lattes.cnpq.br/5699536418012791",
       linkedin: "https://www.linkedin.com/in/beneditomacedo/",
       foto: fotoBeto
@@ -48,43 +49,51 @@ export default function Equipe() {
   const pesquisadores = [
     {
       nome: "Diego N. Brandão",
-      cargo: t('equipe.cargos.engSoftware'),
-      area: t('equipe.areas.engSoftwares'),
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.diego'),
       lattes: "http://lattes.cnpq.br/5882024148867913",
       linkedin: "https://www.linkedin.com/in/diego-brand%C3%A3o-2263236/",
       foto: fotoDiego
     },
     {
       nome: "Henrique B. Foresti",
-      cargo: t('equipe.cargos.espRobotica'),
-      area: t('equipe.areas.espRobotica'),
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.mineiro'),
       lattes: "http://lattes.cnpq.br/5161255861654045",
       linkedin: "https://br.linkedin.com/in/hforesti",
       foto: fotoMineiro
     },
     {
       nome: "Marco A. de Oliveira Domingues",
-      cargo: t('equipe.cargos.devSoftware'),
-      area: t('equipe.areas.visaoComp'),
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.marco'),
       lattes: "http://lattes.cnpq.br/7139685024425123",
       linkedin: "#",
       foto: fotoMarco
     },
     {
       nome: "José Carlos Barbosa Pereira Filho",
-      cargo: t('equipe.cargos.engMeca'),
-      area: t('equipe.areas.engMeca'),
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.touca'),
       lattes: "http://lattes.cnpq.br/0273490342823896",
       linkedin: "#",
       foto: fotoTouca
     },
     {
       nome: "Alex Cristóvão Holanda de Oliveira",
-      cargo: t('equipe.cargos.radiologia'),
-      area: t('equipe.areas.radiologia'),
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.alex'),
       lattes: "http://lattes.cnpq.br/5018122822281130",
       linkedin: "https://www.linkedin.com/in/alex-holanda-de-oliveira",
       foto: fotoAlex
+    },
+    {
+      nome: "Ygor César Nogueira Sousa",
+      cargo: t('equipe.cargos.invAssociado'),
+      area: t('equipe.areas.ygor'),
+      lattes: "http://lattes.cnpq.br/6025443250615104",
+      linkedin: "https://www.linkedin.com/in/ygorsousa48b/",
+      foto: fotoYgor
     }
   ];
 
@@ -92,7 +101,7 @@ export default function Equipe() {
     {
       nome: "Aline May Takakura",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.mapeamento3D'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/2024420186542233",
       linkedin: "#",
       foto: fotoAline
@@ -100,7 +109,7 @@ export default function Equipe() {
     {
       nome: "David Magalhães Porto Oliveira",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.bioinvasores'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/7688696177210482",
       linkedin: "https://www.linkedin.com/in/davidmpo/",
       foto: fotoDavid
@@ -108,7 +117,7 @@ export default function Equipe() {
     {
       nome: "Humberto Mota de Lima",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.fusaoSensores'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/1362022929143570",
       linkedin: "https://www.linkedin.com/in/humberto-mota-de-lima/",
       foto: fotoHumberto
@@ -116,7 +125,7 @@ export default function Equipe() {
     {
       nome: "Rafael Varela Joachim Queimado",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.fusaoSensores'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/3872985475815307",
       linkedin: "https://www.linkedin.com/in/rafael-varela-queimado-45255b3b5/",
       foto: fotoRafaelVQ
@@ -124,7 +133,7 @@ export default function Equipe() {
     {
       nome: "João Pedro dos Santos Menezes",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.GT'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/2298762985819875",
       linkedin: "https://www.linkedin.com/in/joaopedrosmenezes/",
       foto: fotoJP
@@ -132,7 +141,7 @@ export default function Equipe() {
     {
       nome: "Denys Leonardo Oliveira de Sales",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.denys'),
+      area: t('equipe.areas.empty'),
       lattes: "http://lattes.cnpq.br/7549812058342444",
       linkedin: "https://www.linkedin.com/in/denys-sales",
       foto: fotoDenys
@@ -140,7 +149,7 @@ export default function Equipe() {
     {
       nome: "Frederico da Costa Rabello Neto",
       cargo: t('equipe.cargos.discGrad'),
-      area: t('equipe.areas.frederico'),
+      area: t('equipe.areas.empty'),
       lattes: "#",
       linkedin: "https://www.linkedin.com/in/fredericorabello",
       foto: fotoFrederico
