@@ -9,8 +9,8 @@ export const pt = {
   },
   home: {
     heroBadge: "Grupo de Pesquisa Científica",
-    heroTitle1: "Laboratório de Robótica e Sistemas Autônomos Subaquáticos",
-    heroDesc: "O grupo dedica-se à investigação científica em percepção robótica, estimativa de estado e mapeamento tridimensional em ambientes subaquáticos. O nosso foco reside na superação de desafios impostos por restrições operacionais severas, como ausência de sinais GNSS, alta turbidez, espalhamento óptico e forte multipath acústico em ambientes confinados, visando o incremento da autonomia robusta de AUVs e ROVs.",
+    heroTitle1: "Centro de Robótica Aplicada e Tecnologias Emergentes",
+    heroDesc: "O CREATE@CESAR é um grupo de pesquisa dedicado ao desenvolvimento de sistemas robóticos subaquáticos, terrestres e aéreos para inspeção e monitoramento. Atua em percepção robótica, fusão de sensores, visão computacional, localização e mapeamento simultâneos (SLAM), reconstrução 3D e navegação autônoma. Desenvolve soluções para ambientes confinados, baixa visibilidade e ausência de GNSS, integrando sensores ópticos e acústicos e inteligência artificial. Suas pesquisas abrangem inspeção de superfícies para avaliação de corrosão, desgaste e bioincrustação, monitoramento ambiental e criação de gêmeos digitais. Investiga também a detecção automática de coral-sol, avaliando a influência das condições ópticas do ambiente e de técnicas de melhoramento de imagens sobre seu reconhecimento.",
     btnPesquisa: "Linhas de Investigação",
     btnPubs: "Repositório de Publicações",
     parceirosTitle: "Parcerias e Apoio Institucional",
@@ -69,32 +69,23 @@ export const pt = {
       alumni: "Egressos"
     },
     cargos: {
-      radiologia: "Fisico Radiologista",
       invDiretor: "Pesquisador Associado / Diretor do CESAR",
-      espRobotica: "Especialista em Robótica",
-      engSoftware: "Engenheiro de Software",
-      engMeca: "Engenheiro Mecatrônico",
       invPrincipal: "Pesquisador Principal / Coordenador",
       invAssociado: "Pesquisador Associado",
-      devSoftware: "Desenvolvedor de Software",
       discGrad: "Graduando Pesquisador",
       discPos: "Pós-graduando Pesquisador",
       egressoGrad: "Pesquisador Egresso"
     },
     areas: {
-      radiologia: "Físico, Tecnólogo em Radiologia, Pesquisador",
-      engMeca: "Mecânica, Eletrônica e Computação",
-      engSoftware: "Engenharia de Software, IoT e Robótica",
-      gestorDev: "Gestão e Desenvolvimento de Software",
-      visaoComp: "Visão Computacional e Robótica",
-      espRobotica: "Sistemas Embarcados, Robótica e Eletrônica",
-      engSoftwares: "Modelagem Computacional e Aprendizado de Máquina",
-      GT: "",
-      fusaoSensores: "",
-      mapeamento3D: "",
-      bioinvasores: "",
-      denys: "",
-      frederico: ""
+      alex: "Físico, Mestrado e Doutorado em Tecnologia",
+      beto: "Gestão e Desenvolvimento de Software",
+      diego: "Modelagem Computacional e Aprendizado de Máquina",
+      fernando: "Engenharia de Software, IoT e Robótica",
+      marco: "Visão Computacional e Robótica",
+      mineiro: "Sistemas Embarcados, Robótica e Eletrônica",
+      touca: "Engenharia Mecânica, Eletrônica e Computação",
+      ygor: "Aprendizado de Máquina e Robótica Móvel",
+      empty: ""
     }
   },
 
